@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgUsu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/ptApellido1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/ptNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUsu"
+        app:layout_constraintEnd_toStartOf="@+id/btAceptar"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="@+id/btAceptar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/ptApellido1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="Primer Apellido"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgUsu" />
+
+    <EditText
+        android:id="@+id/ptApellido2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Segundo Apellido"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ptApellido1" />
+
+    <EditText
+        android:id="@+id/tpnTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="@+id/tvEtiqTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/tvEtiqTelefono" />
+
+    <EditText
+        android:id="@+id/tdFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/tvEtiqFecha"
+        app:layout_constraintTop_toBottomOf="@+id/tvEtiqFecha" />
+
+    <EditText
+        android:id="@+id/tmEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/tvEtiqEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvEtiqEmail" />
+
+    <EditText
+        android:id="@+id/tpsContrasenia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/tvEtiqContrasenia"
+        app:layout_constraintTop_toBottomOf="@+id/tvEtiqContrasenia" />
+
+    <TextView
+        android:id="@+id/tvEtiqContrasenia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Contraseña:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tmEmail" />
+
+    <EditText
+        android:id="@+id/tpsValContrasenia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/tvEtiqValContrasenia"
+        app:layout_constraintTop_toBottomOf="@+id/tvEtiqValContrasenia" />
+
+    <EditText
+        android:id="@+id/tvObservaciones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="15dp"
+        android:text="Observaciones: "
+        app:layout_constraintBottom_toBottomOf="@+id/tpsValContrasenia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tdFecha"
+        app:layout_constraintTop_toTopOf="@+id/tdFecha" />
+
+    <TextView
+        android:id="@+id/tvEtiqValContrasenia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:text="Repetir contraseña:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tpsContrasenia" />
+
+    <TextView
+        android:id="@+id/tvEtiqEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="E-mail:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tdFecha" />
+
+    <TextView
+        android:id="@+id/tvEtiqFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Fecha:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tpnTelefono" />
+
+    <TextView
+        android:id="@+id/tvEtiqTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="19dp"
+        android:text="Telefono:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ptApellido2" />
+
+    <Button
+        android:id="@+id/btAceptar"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginBottom="163dp"
+        android:text="Aceptar"
+        app:layout_constraintBottom_toTopOf="@+id/tvObservaciones"
+        app:layout_constraintEnd_toEndOf="@+id/btBorrar"
+        app:layout_constraintStart_toStartOf="@+id/btBorrar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btBorrar"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="58dp"
+        android:text="Borrar"
+        app:layout_constraintBottom_toTopOf="@+id/tvObservaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvObservaciones"
+        app:layout_constraintTop_toBottomOf="@+id/ptApellido1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
