@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">PMDM Form</string>
+
+    <!-- Campos del formulario -->
+    <string name="hint_nombre">Name</string>
+    <string name="hint_primer_apellido">First Surname</string>
+    <string name="hint_segundo_apellido">Second Surname</string>
+    <string name="hint_fecha_nacimiento">Date of birth</string>
+    <string name="hint_telefono">Phone</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_contrasenia">Password</string>
+    <string name="hint_repetir_contrasenia">Repeat password</string>
+    <string name="hint_observaciones">Observations</string>
+
+    <!-- Botones -->
+    <string name="button_accept">Accept</string>
+    <string name="button_cancel">Delete</string>
+</resources>

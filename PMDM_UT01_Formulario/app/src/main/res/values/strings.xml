@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">PMDM_UT01_Formulario</string>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">Formulario PMDM</string>
+
+    <!-- Campos del formulario -->
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_primer_apellido">Primer Apellido</string>
+    <string name="hint_segundo_apellido">Segundo Apellido</string>
+    <string name="hint_fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_email">Correo electrónico</string>
+    <string name="hint_contrasenia">Contraseña</string>
+    <string name="hint_repetir_contrasenia">Repetir contraseña</string>
+    <string name="hint_observaciones">Observaciones</string>
+
+    <!-- Botones -->
+    <string name="button_accept">Aceptar</string>
+    <string name="button_cancel">Borrar</string>
 </resources>

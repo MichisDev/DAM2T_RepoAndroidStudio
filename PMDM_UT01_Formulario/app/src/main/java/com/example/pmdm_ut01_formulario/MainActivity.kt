@@ -5,10 +5,7 @@ import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val tmEmail = findViewById<EditText>(R.id.tmEmail)
         val tpsContrasenia = findViewById<EditText>(R.id.tpsContrasenia)
         val tpsValContrasenia = findViewById<EditText>(R.id.tpsValContrasenia)
-        val tvObservaciones = findViewById<EditText>(R.id.tvObservaciones)
+        val tvObservaciones = findViewById<EditText>(R.id.etObservaciones)
 
         // Botón de Borrar
         val btBorrar = findViewById<Button>(R.id.btBorrar)
@@ -63,6 +60,10 @@ class MainActivity : AppCompatActivity() {
                 mostrarError(ptApellido1, "El primer apellido no puede estar vacío")
                 return@setOnClickListener
             }
+            if (apellido2.isEmpty()) {
+                mostrarError(ptApellido2, "El segundo apellido no puede estar vacío")
+                return@setOnClickListener
+            }
             if (telefono.length != 9 || !telefono.all { it.isDigit() }) {
                 mostrarError(tpnTelefono, "El teléfono debe tener 9 dígitos")
                 return@setOnClickListener
@@ -73,6 +74,10 @@ class MainActivity : AppCompatActivity() {
             }
             if (contrasenia != valContrasenia) {
                 mostrarError(tpsValContrasenia, "Las contraseñas no coinciden")
+                return@setOnClickListener
+            }
+            if (contrasenia.length < 6) {
+                mostrarError(tpsContrasenia, "La contraseña debe tener al menos 6 caracteres")
                 return@setOnClickListener
             }
 
