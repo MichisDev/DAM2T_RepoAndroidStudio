@@ -102,6 +102,7 @@
         android:id="@+id/rdgGrupoBotones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="170dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,5 +120,51 @@
             android:layout_height="wrap_content"
             android:text="Borde Grueso" />
     </RadioGroup>
+
+    <Switch
+        android:id="@+id/swCondiciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="Condiciones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btBorrar"
+        app:layout_constraintVertical_bias="0.492" />
+
+    <CheckBox
+        android:id="@+id/chQueso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="24dp"
+        android:text="Queso"
+        app:layout_constraintBottom_toTopOf="@+id/btAceptar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/chCebolla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cebollla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toEndOf="@+id/chQueso"
+        tools:layout_editor_absoluteY="382dp" />
+
+    <CheckBox
+        android:id="@+id/chBacon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bacon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chCebolla"
+        tools:layout_editor_absoluteY="382dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
