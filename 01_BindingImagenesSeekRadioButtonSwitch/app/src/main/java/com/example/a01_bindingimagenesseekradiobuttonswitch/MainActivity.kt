@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -36,11 +37,14 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // formas de mostrar con binding y sin el
         val miTag = "Michelle"
         /*val btAceptar = findViewById<Button>(R.id.btAceptar)
         val btBorrar = findViewById<Button>(R.id.btBorrar)
         val ptNombre = findViewById<EditText>(R.id.ptNombre)
         */
+
+
         myBinding.btAceptar.setOnClickListener {
 
             // println(ptNombre.text).toString()
@@ -53,6 +57,13 @@ class MainActivity : AppCompatActivity() {
             myBinding.ptNombre.text.clear()
         }
 
+        // cambiar icono burger
+        val imBtImagen = findViewById<ImageButton>(R.id.imBtImagen)
+        val imgIconoBurger = findViewById<ImageButton>(R.id.imgIconoBurger)
+
+        imBtImagen.setOnClickListener {
+            imgIconoBurger.setImageResource(R.drawable.ic_pizza)
+        }
 
 
     }
