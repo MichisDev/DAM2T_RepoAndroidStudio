@@ -56,12 +56,15 @@
         android:id="@+id/btBorrar"
         android:layout_width="117dp"
         android:layout_height="49dp"
+        android:layout_marginStart="64dp"
         android:text="Borrar"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btAceptar"
         app:layout_constraintTop_toBottomOf="@+id/ptNombre"
-        app:layout_constraintVertical_bias="0.306"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="239dp" />
+        app:layout_constraintVertical_bias="0.303"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imgIconoBurger"
@@ -92,6 +95,29 @@
         app:layout_constraintStart_toEndOf="@+id/imgIconoBurger"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="0.125"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        app:srcCompat="@android:drawable/ic_media_play"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <RadioGroup
+        android:id="@+id/rdgGrupoBotones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btAceptar">
+
+        <RadioButton
+            android:id="@+id/rdbBordeFino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BordeFino" />
+
+        <RadioButton
+            android:id="@+id/rdbGrueso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Borde Grueso" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
