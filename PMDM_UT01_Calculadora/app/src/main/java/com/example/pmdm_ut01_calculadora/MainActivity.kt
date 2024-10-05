@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val etnNumero1 = findViewById<EditText>(R.id.etnNumero1)
         val etnNumero2 = findViewById<EditText>(R.id.etnNumero2)
         val etnResultado = findViewById<EditText>(R.id.etnResultado)
-        val etnResto = findViewById<EditText>(R.id.etnRestos)
+        //val etnResto = findViewById<EditText>(R.id.etnRestos)
 
         // Eventos de los botones
         btSumar.setOnClickListener {
