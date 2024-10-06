@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema base para aplicacion -->
+    <style name="MiTema" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <!-- Estilo para el TextView -->
+        <style name="TextoPrimario">
+            <item name="android:textColor">@color/blanco</item>
+            <item name="android:textSize">16sp</item>
+            <item name="android:padding">8dp</item>
+        </style>
+
+        <!-- Estilo para los botones -->
+        <style name="BotonPrimario">
+            <item name="android:background">@color/morado</item>
+            <item name="android:textColor">@color/blanco</item>
+            <item name="android:padding">12dp</item>
+            <item name="android:layout_margin">4dp</item>
+            <item name="android:cornerRadius">8dp</item>
+        </style>
+
+        <!-- Estilo para el layout de fondo -->
+        <style name="FondoLayout">
+            <item name="android:background">@color/negro</item>
+        </style>
+
+        <!-- Estilo para los TextView del resultado -->
+        <style name="TextoResultado">
+            <item name="android:textColor">@color/fucsia</item>
+            <item name="android:textSize">20sp</item>
+            <item name="android:padding">10dp</item>
+        </style>
+
+        <!-- Estilo para los errores -->
+        <style name="TextoError">
+            <item name="android:textColor">@color/error</item>
+            <item name="android:textSize">14sp</item>
+            <item name="android:padding">8dp</item>
+        </style>
+
+        <!-- Estilo para texto correcto -->
+        <style name="TextoCorrecto">
+            <item name="android:textColor">@color/correcto</item>
+            <item name="android:textSize">14sp</item>
+            <item name="android:padding">8dp</item>
+        </style>
+    </style>
+</resources>

@@ -46,34 +46,39 @@ class MainActivity : AppCompatActivity() {
                 val resultado = num1 + num2
                 tvResultado.text = resultado.toString()
                 val resto = num1 - num2
-                tvResto.text = resto.toString()
+                tvResto.visibility = View.GONE // Ocultar resto en suma
             } else {
                 Toast.makeText(this, "Por favor, introduce números válidos", Toast.LENGTH_SHORT)
                     .show()
             }
         }
+
         btRestar.setOnClickListener {
             val num1 = etnNumero1.text.toString().toIntOrNull()
             val num2 = etnNumero2.text.toString().toIntOrNull()
             if (num1 != null && num2 != null) {
                 val resultado = num1 - num2
                 tvResultado.text = resultado.toString()
+                tvResto.visibility = View.GONE // Ocultar resto en resta
             } else {
                 Toast.makeText(this, "Por favor, introduce números válidos", Toast.LENGTH_SHORT)
                     .show()
             }
         }
+
         btMultiplicar.setOnClickListener {
             val num1 = etnNumero1.text.toString().toIntOrNull()
             val num2 = etnNumero2.text.toString().toIntOrNull()
             if (num1 != null && num2 != null) {
                 val resultado = num1 * num2
                 tvResultado.text = resultado.toString()
+                tvResto.visibility = View.GONE // Ocultar resto en resta
             } else {
                 Toast.makeText(this, "Por favor, introduce números válidos", Toast.LENGTH_SHORT)
                     .show()
             }
         }
+
         btDividir.setOnClickListener {
             val num1 = etnNumero1.text.toString().toIntOrNull()
             val num2 = etnNumero2.text.toString().toIntOrNull()
@@ -85,6 +90,7 @@ class MainActivity : AppCompatActivity() {
 
                     // Mostrar el resto solo si hay
                     val resto = num1 % num2
+
                     if (resto != 0) {
                         tvResto.visibility = View.VISIBLE
                         tvResto.text = "$resto"

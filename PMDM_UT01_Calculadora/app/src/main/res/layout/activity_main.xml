@@ -126,7 +126,7 @@
         android:text="Sumar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btRestar"
-        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="@+id/glVertIzq"
         app:layout_constraintTop_toBottomOf="@+id/tvEtqRsto"
         app:layout_constraintVertical_bias="0.3" />
@@ -139,10 +139,10 @@
         android:text="Multiplicar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btDividir"
-        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintHorizontal_bias="0.72"
         app:layout_constraintStart_toStartOf="@+id/glVertIzq"
         app:layout_constraintTop_toBottomOf="@+id/btSumar"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintVertical_bias="0.302" />
 
     <Button
         android:id="@+id/btRestar"
