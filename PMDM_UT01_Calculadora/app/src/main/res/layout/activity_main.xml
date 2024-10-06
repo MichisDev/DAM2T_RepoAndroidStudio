@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/glHorizArriba"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glHorizArriba"
@@ -31,7 +31,7 @@
         android:id="@+id/tvNum1"
         android:layout_width="108dp"
         android:layout_height="30dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="52dp"
         android:text="Numero 1"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/glVertIzq"
@@ -60,15 +60,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvNum2"
         app:layout_constraintTop_toBottomOf="@+id/tvNum2"
-        app:layout_constraintVertical_bias="0.119" />
+        app:layout_constraintVertical_bias="0.107" />
 
     <TextView
-        android:id="@+id/tvResto"
+        android:id="@+id/tvEtqRsto"
         android:layout_width="108dp"
         android:layout_height="30dp"
         android:text="Resto"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvResul"
         app:layout_constraintStart_toStartOf="@+id/glVertIzq"
         app:layout_constraintTop_toBottomOf="@+id/tvResul"
         app:layout_constraintVertical_bias="0.197" />
@@ -78,13 +79,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="84dp"
         android:ems="10"
         android:hint="Introduce numero"
         android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toStartOf="@+id/glVertDerecha"
-        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintHorizontal_bias="0.733"
         app:layout_constraintStart_toEndOf="@+id/tvNum1"
         app:layout_constraintTop_toTopOf="@+id/glHorizArriba" />
 
@@ -101,22 +102,6 @@
         app:layout_constraintEnd_toStartOf="@+id/glVertDerecha"
         app:layout_constraintTop_toBottomOf="@+id/etnNumero1"
         app:layout_constraintVertical_bias="0.079" />
-
-    <EditText
-        android:id="@+id/etnResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:ems="10"
-        android:hint="Resultado"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/glVertDerecha"
-        app:layout_constraintHorizontal_bias="0.789"
-        app:layout_constraintStart_toEndOf="@+id/tvResul"
-        app:layout_constraintTop_toBottomOf="@+id/etnNumero2"
-        app:layout_constraintVertical_bias="0.088" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glVertIzq"
@@ -136,24 +121,15 @@
         android:id="@+id/btSumar"
         android:layout_width="130dp"
         android:layout_height="48dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="50dp"
         android:layout_marginEnd="71dp"
         android:text="Sumar"
-        app:layout_constraintEnd_toStartOf="@+id/btRestar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/glVertIzq"
-        app:layout_constraintTop_toBottomOf="@+id/tvResto" />
-
-    <Button
-        android:id="@+id/btDividir"
-        android:layout_width="130dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="52dp"
-        android:text="Dividir"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/glVertDerecha"
-        app:layout_constraintTop_toBottomOf="@+id/btRestar"
-        app:layout_constraintVertical_bias="0.293" />
+        app:layout_constraintEnd_toStartOf="@+id/btRestar"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="@+id/glVertIzq"
+        app:layout_constraintTop_toBottomOf="@+id/tvEtqRsto"
+        app:layout_constraintVertical_bias="0.3" />
 
     <Button
         android:id="@+id/btMultiplicar"
@@ -163,35 +139,75 @@
         android:text="Multiplicar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btDividir"
-        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintHorizontal_bias="0.84"
         app:layout_constraintStart_toStartOf="@+id/glVertIzq"
         app:layout_constraintTop_toBottomOf="@+id/btSumar"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintVertical_bias="0.286" />
 
     <Button
         android:id="@+id/btRestar"
         android:layout_width="130dp"
         android:layout_height="48dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="28dp"
         android:text="Restar"
-        app:layout_constraintEnd_toStartOf="@+id/glVertDerecha"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
-
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:hint="Resto"
-        android:inputType="number"
-        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/glVertDerecha"
-        app:layout_constraintHorizontal_bias="0.97"
-        app:layout_constraintStart_toEndOf="@+id/tvResto"
-        app:layout_constraintTop_toBottomOf="@+id/etnResultado"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintTop_toBottomOf="@+id/tvResto"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/btBorrar"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="68dp"
+        android:text="Borrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btDividir"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="@+id/btMultiplicar"
+        app:layout_constraintTop_toTopOf="@+id/glHorizArriba"
+        app:layout_constraintVertical_bias="0.952" />
+
+    <Button
+        android:id="@+id/btDividir"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="28dp"
+        android:text="Dividir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/glVertDerecha"
+        app:layout_constraintTop_toBottomOf="@+id/btRestar"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="34dp"
+        android:text="Resultado"
+        android:textAlignment="inherit"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/glVertDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvResul"
+        app:layout_constraintTop_toBottomOf="@+id/etnNumero2"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <TextView
+        android:id="@+id/tvResto"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="33dp"
+        android:text="Resto"
+        android:textAlignment="inherit"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/glVertDerecha"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toEndOf="@+id/tvEtqRsto"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultado"
+        app:layout_constraintVertical_bias="0.175" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
