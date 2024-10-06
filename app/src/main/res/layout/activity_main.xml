@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C1A2F4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/etnTiradasJ1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/tvTiradas2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTiradas1"
+        app:layout_constraintTop_toBottomOf="@+id/etnPuntos1"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvTiradas2"
+        android:layout_width="94dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="64dp"
+        android:text="Tiradas: "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/etnTiradasJ2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etnTiradasJ1"
+        app:layout_constraintTop_toBottomOf="@+id/tvPuntos2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/etnTiradasJ2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTiradas2"
+        app:layout_constraintTop_toBottomOf="@+id/etnPuntos2"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvTiradas1"
+        android:layout_width="94dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="60dp"
+        android:text="Tiradas: "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/etnTiradasJ1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPuntos1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/etnGanada1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/tvGanada2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGanada"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvGanada2"
+        android:layout_width="94dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="62dp"
+        android:text="Ganada J2: "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/etnGanada2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etnGanada1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvGanada"
+        android:layout_width="94dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="62dp"
+        android:text="Ganada J1:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/etnGanada1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/etnGanada2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGanada2"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="344dp"
+        android:layout_height="23dp"
+        android:text="JUEGO DE LOS DADOS"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <TextView
+        android:id="@+id/etnPuntos1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/tvPuntos2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvPuntos1"
+        app:layout_constraintTop_toBottomOf="@+id/etnGanada1"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvPuntos1"
+        android:layout_width="94dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="48dp"
+        android:text="Puntos J1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/etnPuntos1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGanada"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvPuntos2"
+        android:layout_width="94dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="44dp"
+        android:text="Puntos J2"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/etnPuntos2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etnPuntos1"
+        app:layout_constraintTop_toBottomOf="@+id/tvGanada2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/etnPuntos2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvPuntos2"
+        app:layout_constraintTop_toBottomOf="@+id/etnGanada2"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imgJugador1"
+        android:layout_width="120dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgJugador2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPuntos1"
+        app:layout_constraintVertical_bias="0.399"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/imgJugador2"
+        android:layout_width="120dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgJugador1"
+        app:layout_constraintTop_toBottomOf="@+id/tvPuntos2"
+        app:layout_constraintVertical_bias="0.399"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btJugador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Jugador 1"
+        app:layout_constraintEnd_toStartOf="@+id/btJugador2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgJugador1"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btJugador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Jugador 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btJugador1"
+        app:layout_constraintTop_toBottomOf="@+id/imgJugador2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="44dp"
+        android:text="Reiniciar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btJugador2"
+        app:layout_constraintStart_toStartOf="@+id/btJugador1" />
+
+    <TextView
+        android:id="@+id/tvCampeon1"
+        android:layout_width="102dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="4dp"
+        android:text="¡CAMPEÓN!"
+        app:layout_constraintBottom_toTopOf="@+id/imgJugador1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCampeon2"
+        android:layout_width="94dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="2dp"
+        android:text="¡CAMPEÓN!"
+        app:layout_constraintBottom_toTopOf="@+id/imgJugador2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
