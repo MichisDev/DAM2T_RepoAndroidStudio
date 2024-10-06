@@ -1,14 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PMDM_UT01_Calculadora</string>
-    <string name="bt_sumar">Sumar</string>
+    <string name="app_name">Mi Aplicación</string>
+    <string name="bt_sumar" translatable="false">Sumar</string>
     <string name="bt_restar">Restar</string>
     <string name="bt_multiplicar">Multiplicar</string>
     <string name="bt_dividir">Dividir</string>
     <string name="bt_borrar">Borrar</string>
     <string name="tv_resultado">Resultado</string>
     <string name="tv_resto">Resto</string>
-    <string name="et_numero1">Numero 1</string>
-    <string name="et_numero2">Numero 2</string>
+    <string name="et_numero1">Número 1</string>
+    <string name="et_numero2">Número 2</string>
     <string name="tv_titulo">CALCULADORA</string>
     <string name="bt_salir">Salir</string>
 </resources>
