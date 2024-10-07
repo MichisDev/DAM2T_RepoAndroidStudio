@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "PMDM_UT01_JuegoDados"
 include(":app")
- 
