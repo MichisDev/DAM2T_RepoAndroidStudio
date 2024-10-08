@@ -50,15 +50,17 @@ class MainActivity : AppCompatActivity() {
         var etnPuntos2 = findViewById<TextView>(R.id.etnPuntos2)
         var etnGanada1 = findViewById<TextView>(R.id.etnGanada1)
         var etnGanada2 = findViewById<TextView>(R.id.etnGanada2)
-
+        var ganadas1 = etnGanada1.text.toString().toInt()
+        var ganadas2 = etnGanada2.text.toString().toInt()
 
         // Variables para el juego
         var puntosJugador1 = 0
         var puntosJugador2 = 0
         var tiradasJugador1 = 0
         var tiradasJugador2 = 0
-        var ganadas1 = etnGanada1.text.toString().toIntOrNull() ?: 0
-        var ganadas2 = etnGanada2.text.toString().toIntOrNull() ?: 0
+        ganadas1 = 0
+        ganadas2 = 0
+
 
         // Botón para el jugador 1
         btJugador1.setOnClickListener {
@@ -95,6 +97,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
         // Botón para el jugador 2
         btJugador2.setOnClickListener {
             try {
@@ -122,6 +125,7 @@ class MainActivity : AppCompatActivity() {
                     mostrarGanador(puntosJugador1, puntosJugador2, etnGanada1, etnGanada2)
                     btJugador1.isEnabled = false // Desactivar botones
                     btJugador2.isEnabled = false
+
                 }
             } catch (e: Exception) {
                 Toast.makeText(this, "Ha ocurrido un error: ${e.message}", Toast.LENGTH_SHORT)
