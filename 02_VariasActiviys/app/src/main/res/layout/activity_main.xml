@@ -7,18 +7,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btEsperarActual"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:text="Llamar y esperar respuesta Actual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btEsperarDeprecated"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <Button
+        android:id="@+id/btReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btAceptar"
+        app:layout_constraintVertical_bias="0.218" />
+
     <EditText
-        android:id="@+id/edApellido"
+        android:id="@+id/ptEdad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Dime tu apellido"
+        android:hint="Dime tu edad"
         android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvEApellido"
-        app:layout_constraintTop_toBottomOf="@+id/edNombre"
+        app:layout_constraintStart_toEndOf="@+id/tvEEdad"
+        app:layout_constraintTop_toBottomOf="@+id/ptNombre"
         app:layout_constraintVertical_bias="0.093" />
 
     <TextView
@@ -27,31 +53,32 @@
         android:layout_height="21dp"
         android:text="Nombre: "
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/edNombre"
+        app:layout_constraintEnd_toStartOf="@+id/ptNombre"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.126" />
 
     <TextView
-        android:id="@+id/tvEApellido"
+        android:id="@+id/tvEEdad"
         android:layout_width="64dp"
         android:layout_height="21dp"
-        android:text="Apellido: "
+        android:text="Edad: "
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/edApellido"
+        app:layout_constraintEnd_toStartOf="@+id/ptEdad"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvENombre"
         app:layout_constraintVertical_bias="0.13" />
 
     <EditText
-        android:id="@+id/edNombre"
+        android:id="@+id/ptNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Dime tu nombre"
         android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -63,12 +90,26 @@
         android:id="@+id/btAceptar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="473dp"
-        android:text="Aceptar"
+        android:layout_marginTop="81dp"
+        android:layout_marginBottom="392dp"
+        android:text="Pasar a la segunda"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edApellido"
+        app:layout_constraintTop_toBottomOf="@+id/ptEdad"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btEsperarDeprecated"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:text="Llamar y esperar respuesta deprecated"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btReiniciar"
+        app:layout_constraintVertical_bias="0.063" />
 </androidx.constraintlayout.widget.ConstraintLayout>
