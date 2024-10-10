@@ -1,5 +1,6 @@
 package com.example.a02_variasactiviys
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -34,7 +35,7 @@ EJEMPLO CON INTENT Y OBJETO PERSONA
         binding.tvTitulo.text = "Bienvenido ${p.nombre} ${p.apellido}"
 */
 
-
+/*
         // 3) Recogemos los parametros que nos llegan del objeto bundle
         val bundle = intent.getBundleExtra("objeto")
         val nom = bundle!!.getString("nombre1")
@@ -46,7 +47,22 @@ EJEMPLO CON INTENT Y OBJETO PERSONA
         //binding.tvTitulo.text = "Con bundle objeto: "+p.toString() // APARECE EL TO STRING RARO NO RECOGE LOS PARAMETROS NO FUNKA
         // binding.tvTitulo.text = "Bienvenido con bundle objeto: ${p.nombre} ${p.edad}" // NO RECOGE LOS PARAMETROS NO FUNKA
 
+*/
+        // B. Devolver datos a la ventana 1
+        binding.btDevolverActual.setOnClickListener {
+            val stringToPass = binding.ptDevolver.text.toString()
+            val intent = Intent()
+            intent.putExtra("valor", stringToPass)
+            setResult(RESULT_OK, intent)
+            finish()
+        }
 
+        // 10.Devolver datos a la ventana 1 deprecated
+        binding.btDevolverDeprecate.setOnClickListener {
+            intent.putExtra("valor", binding.ptDevolver.text.toString())
+            setResult(RESULT_OK, intent)
+            finish()
+        }
 
 
         binding.btVolver.setOnClickListener {
