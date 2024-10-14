@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/tvDetallesEncuesta"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="412dp"
+        android:layout_height="187dp"
         android:layout_marginTop="72dp"
         android:padding="16dp"
         android:textSize="18sp"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginTop="90dp"
-        android:text="Volver"
+        android:text="@string/btVolver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,5 +1,20 @@
 <resources>
     <string name="app_name">UT01_Tarea_04_Calculadora</string>
-    <string name="titulo" />
-    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tvEncuestas">Encuesta</string>
+    <string name="eTNombre">Tu Nombre</string>
+    <string name="swAnonimo">Anonimo</string>
+    <string name="tVOperativo">Sistema Operativo Preferido</string>
+    <string name="rcMac">Mac</string>
+    <string name="rbWindows">Windows</string>
+    <string name="rbLinux">Linux</string>
+    <string name="tVEspecialidad">"Especialidad: "</string>
+    <string name="ckDam">DAM</string>
+    <string name="ckAsir">ASIR</string>
+    <string name="ckDaw">DAW</string>
+    <string name="tvHorasEstudio">Horas de estudio</string>
+    <string name="btValidar">Validar</string>
+    <string name="btReiniciar">Reiniciar</string>
+    <string name="btCuantas">Cuantas</string>
+    <string name="btResumen">Resumen</string>
+    <string name="btVolver" >Volver</string>
 </resources>

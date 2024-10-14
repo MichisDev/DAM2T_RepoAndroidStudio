@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UT01_Tarea_04_Calculadora</string>
+    <string name="tvEncuestas">Survey</string>
+    <string name="eTNombre">Your Name</string>
+    <string name="swAnonimo">Anonimous</string>
+    <string name="tVOperativo">Preferred Operating System</string>
+    <string name="rcMac">Mac</string>
+    <string name="rbWindows">Windows</string>
+    <string name="rbLinux">Linux</string>
+    <string name="tVEspecialidad">Especialty</string>
+    <string name="ckDam">DAM</string>
+    <string name="ckAsir">ASIR</string>
+    <string name="ckDaw">DAW</string>
+    <string name="tvHorasEstudio">Study Hours</string>
+    <string name="btValidar">Validate</string>
+    <string name="btReiniciar">Restart</string>
+    <string name="btCuantas">How many</string>
+    <string name="btResumen">Resume</string>
+    <string name="btVolver">Back</string>
+</resources>

@@ -11,12 +11,12 @@
         android:id="@+id/tVEncuesta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Encuesta"
-        android:textSize="24sp"
+        android:text="@string/tvEncuestas"
         android:textColor="#6200EE"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/eTNombre"
@@ -24,7 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:enabled="false"
-        android:hint="Tu nombre.."
+        android:hint="@string/eTNombre"
+        android:minHeight="48dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Anónimo"
+        android:minHeight="48dp"
+        android:text="@string/swAnonimo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/eTNombre" />
 
@@ -43,7 +45,7 @@
         android:id="@+id/tVSOpertivo"
         android:layout_width="225dp"
         android:layout_height="21dp"
-        android:text="Sistema operativo preferido"
+        android:text="@string/tVOperativo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/swAnonimo" />
 
@@ -61,34 +63,34 @@
             android:id="@+id/rbMac"
             android:layout_width="84dp"
             android:layout_height="wrap_content"
-            android:text="Mac" />
+            android:text="@string/rcMac" />
 
         <RadioButton
             android:id="@+id/rbWindows"
             android:layout_width="105dp"
             android:layout_height="wrap_content"
-            android:text="Windows" />
+            android:text="@string/rbWindows" />
 
         <RadioButton
             android:id="@+id/rbLinux"
             android:layout_width="77dp"
             android:layout_height="wrap_content"
-            android:text="Linux" />
+            android:text="@string/rbLinux" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/tVEspecialidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Especialidad:"
+        android:layout_width="112dp"
+        android:layout_height="20dp"
+        android:text="@string/tVEspecialidad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/radioGroupSO" />
 
     <CheckBox
         android:id="@+id/ckDam"
         android:layout_width="71dp"
-        android:layout_height="47dp"
-        android:text="DAM"
+        android:layout_height="48dp"
+        android:text="@string/ckDam"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tVEspecialidad" />
 
@@ -96,15 +98,15 @@
         android:id="@+id/ckAsir"
         android:layout_width="70dp"
         android:layout_height="49dp"
-        android:text="ASIR"
+        android:text="@string/ckAsir"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ckDam" />
 
     <CheckBox
         android:id="@+id/ckDaw"
         android:layout_width="69dp"
-        android:layout_height="46dp"
-        android:text="DAW"
+        android:layout_height="48dp"
+        android:text="@string/ckDaw"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ckAsir" />
 
@@ -112,7 +114,7 @@
         android:id="@+id/tvHorasEstudio"
         android:layout_width="111dp"
         android:layout_height="19dp"
-        android:text="Horas de estudio"
+        android:text="@string/tvHorasEstudio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ckDaw" />
 
@@ -120,20 +122,22 @@
         android:id="@+id/sbHoras"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:max="10"
         android:progress="4"
-        app:layout_constraintTop_toBottomOf="@id/tvHorasEstudio"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHorasEstudio" />
 
     <Button
         android:id="@+id/btValidar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Validar"
+        android:text="@string/btValidar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sbHoras" />
 
@@ -141,7 +145,7 @@
         android:id="@+id/btReiniciar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Reiniciar"
+        android:text="@string/btReiniciar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btValidar" />
@@ -150,7 +154,7 @@
         android:id="@+id/btCuantas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Cuantas"
+        android:text="@string/btCuantas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btReiniciar" />
@@ -159,8 +163,9 @@
         android:id="@+id/btResumen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Resumen"
+        android:text="@string/btResumen"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btCuantas" />
 
