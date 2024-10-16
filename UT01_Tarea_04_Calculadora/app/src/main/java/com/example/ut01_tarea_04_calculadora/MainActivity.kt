@@ -38,7 +38,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnReiniciar: Button
     private lateinit var btnCuantas: Button
     private lateinit var btnResumen: Button
+    private lateinit var btnBorrar: Button
     private lateinit var textViewResumen: TextView
+    private lateinit var horasEstudio: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,17 +62,23 @@ class MainActivity : AppCompatActivity() {
         btnReiniciar = findViewById(R.id.btReiniciar)
         btnCuantas = findViewById(R.id.btCuantas)
         btnResumen = findViewById(R.id.btResumen)
+        btnBorrar = findViewById(R.id.btBorrar)
         textViewResumen = findViewById(R.id.textViewResumen)
+        horasEstudio = findViewById(R.id.tvHorasEstudio)
+
+        // Inicializa el EditText como habilitado
+        eTNombre.isEnabled = true
 
         // Configurar el listener para el botón "Validar"
         btnValidar.setOnClickListener {
             validarEncuesta()
         }
 
-        // Configurar otros botones (Reiniciar, Cuantas, Resumen)
+        // Configurar otros botones (Reiniciar, Cuantas, Resumen,Borrar)
         btnReiniciar.setOnClickListener { reiniciarEncuesta() }
         btnCuantas.setOnClickListener { mostrarCantidadEncuestas() }
         btnResumen.setOnClickListener { mostrarResumen() }
+        btnBorrar.setOnClickListener { borrarFormulario() }
 
         // Configurar el Switch para habilitar/deshabilitar el EditText
         swAnonimo.setOnCheckedChangeListener { _, isChecked ->
@@ -80,7 +88,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Actulizar el textView de horasEstudio al cambiar la seekBar
+        sbHoras.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                horasEstudio.text = getString(R.string.tvHorasEstudio).replace("4", progress.toString())
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
+
     }
+
 
     private fun validarEncuesta() {
         // Obtener los valores de los campos
@@ -137,6 +155,19 @@ class MainActivity : AppCompatActivity() {
         encuestas.clear() // Esto borra todas las encuestas
 
         Toast.makeText(this, "Encuesta reiniciada.", Toast.LENGTH_SHORT).show()
+    }
+    private fun borrarFormulario() {
+        // Limpiar todos los campos del formulario
+        eTNombre.text.clear()
+        swAnonimo.isChecked = false
+        radioGroupSO.clearCheck()
+        ckDam.isChecked = false
+        ckAsir.isChecked = false
+        ckDaw.isChecked = false
+        sbHoras.progress = 4 // Puedes establecer el valor que consideres predeterminado
+        textViewResumen.text = "" // Limpiar el resumen
+
+        Toast.makeText(this, "Formulario borrado.", Toast.LENGTH_SHORT).show()
     }
 
     private fun mostrarCantidadEncuestas() {

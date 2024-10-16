@@ -11,7 +11,7 @@
     <string name="ckDam">DAM</string>
     <string name="ckAsir">ASIR</string>
     <string name="ckDaw">DAW</string>
-    <string name="tvHorasEstudio">Horas de estudio</string>
+    <string name="tvHorasEstudio">Horas de estudio : 4</string>
     <string name="btValidar">Validar</string>
     <string name="btReiniciar">Reiniciar</string>
     <string name="btCuantas">Cuantas</string>

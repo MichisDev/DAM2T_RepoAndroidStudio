@@ -26,6 +26,8 @@
         android:layout_margin="16dp"
         android:layout_marginTop="90dp"
         android:text="@string/btVolver"
+        android:backgroundTint="@color/colorBotones"
+        android:textColor="@color/colorTexto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

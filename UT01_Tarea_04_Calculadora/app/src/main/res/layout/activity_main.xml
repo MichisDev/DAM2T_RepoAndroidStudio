@@ -5,15 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorFondo"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tVEncuesta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimario"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
         android:text="@string/tvEncuestas"
-        android:textColor="#6200EE"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -112,8 +116,8 @@
 
     <TextView
         android:id="@+id/tvHorasEstudio"
-        android:layout_width="111dp"
-        android:layout_height="19dp"
+        android:layout_width="165dp"
+        android:layout_height="18dp"
         android:text="@string/tvHorasEstudio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ckDaw" />
@@ -130,52 +134,84 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvHorasEstudio" />
 
-    <Button
-        android:id="@+id/btValidar"
+    <!-- Fila de botones: Validar, Cuantas y Resumen -->
+    <LinearLayout
+        android:id="@+id/buttonRow1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/btValidar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/sbHoras"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sbHoras" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/btReiniciar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/btReiniciar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btValidar" />
+        <Button
+            android:id="@+id/btValidar"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorBotones"
+            android:text="@string/btValidar"
+            android:textColor="@color/colorTexto"
+            android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/btCuantas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/btCuantas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btReiniciar" />
+        <Button
+            android:id="@+id/btCuantas"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorBotones"
+            android:text="@string/btCuantas"
+            android:textColor="@color/colorTexto"
+            android:layout_weight="1" />
 
-    <Button
-        android:id="@+id/btResumen"
+        <Button
+            android:id="@+id/btResumen"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:backgroundTint="@color/colorBotones"
+            android:text="@string/btResumen"
+            android:textColor="@color/colorTexto"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Fila de botones: Borrar y Reiniciar -->
+    <LinearLayout
+        android:id="@+id/buttonRow2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/btResumen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/buttonRow1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btCuantas" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btBorrar"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorBotones"
+            android:text="Borrar"
+            android:textColor="@color/colorTexto"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btReiniciar"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:backgroundTint="@color/colorBotones"
+            android:text="@string/btReiniciar"
+            android:textColor="@color/colorTexto"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textViewResumen"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="450dp"
+        android:layout_height="198dp"
         android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/btResumen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/buttonRow2" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
