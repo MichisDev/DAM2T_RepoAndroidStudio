@@ -18,13 +18,16 @@ class AdapterCantantes(private val listaCantantes: ArrayList<String>) :
 
     override fun onBindViewHolder(holder: ViewHolderCantantes, position: Int) {
 
-        // Inicializamos list de cantantes
+        // Inicializamos list de cantantes con la posicon
         val cantante = listaCantantes[position]
         holder.textView.text = cantante
 
-        // Asignamos el click listener, al hacer clic el fondo cambia de color
+        // Asignamos el click listener, al hacer clic el fondo cambia de color aca item item por item
         holder.itemView.setOnClickListener {
             holder.itemView.setBackgroundResource(R.color.purple)
+
+            // mejoramos el cambio de color
+            //if (!holder.isBackgroundColorChange) {
         }
 
         // Al dejar pulsado se elimina el item de la lista
