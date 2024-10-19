@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mi_color_de_texto">#FF000000</color>
+    <color name="mi_color_de_fondo">#FFFFFFFF</color>
+    <color name="mi_color_primario">#FF6200EE</color>
+    <color name="mi_color_primario_oscuro">#3700B3</color>
+    <color name="mi_color_acento">#03DAC5</color>
+    <!-- Define más colores aquí si es necesario -->
+</resources>

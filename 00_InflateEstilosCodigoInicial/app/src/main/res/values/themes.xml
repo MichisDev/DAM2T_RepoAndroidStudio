@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme._00_InflateEstilosCodigoInicial" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme._00_InflateEstilosCodigoInicial" parent="Base.Theme._00_InflateEstilosCodigoInicial" />
+
+    <!-- Tema personalizado por gemini -->
+    <style name="MiTema" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Coleres personalizados, definir en el archivo colors.xml -->
+        <item name="colorPrimary">@color/mi_color_primario</item>
+        <item name="colorPrimaryDark">@color/mi_color_primario_oscuro</item>
+        <item name="colorAccent">@color/mi_color_acento</item>
+        <item name="android:windowBackground">@color/mi_color_de_fondo</item>
+        <!-- Texto personalizado, definir en el archivo colors.xml -->
+        <item name="android:textColorPrimary">@color/mi_color_de_texto</item>
+        <!-- Fuente personalizada, definir en el archivo font.xml y manifest.xml -->
+        <item name="android:fontFamily">@font/monserrat</item>
+    </style>
+
+    <!-- <style name="MiTema" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/mi_color_primario</item>
+        <item name="colorPrimaryDark">@color/mi_color_primario_oscuro</item>
+        <item name="colorAccent">@color/mi_color_acento</item>
+        <item name="android:windowBackground">@color/mi_color_fondo</item>
+        <item name="android:textColorPrimary">@color/mi_color_de_texto</item>
+        <item name="android:fontFamily">@font/monserrat</item>
+    </style> -->
+</resources>
