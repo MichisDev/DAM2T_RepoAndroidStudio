@@ -5,15 +5,26 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C9E9E2"
+    android:textAlignment="gravity"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <FrameLayout
+        android:id="@+id/frLayaout"
+        android:layout_width="319dp"
+        android:layout_height="112dp"
+        android:background="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025">
 
+        <TextView
+            android:id="@+id/tvFrLayaout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="FrameLayout: Es como se colocaban las cosas antes mediante la propiedad layout_gravity de  los elementos. No se usa, al igual que el GridLayout que está en el apartado Legacy. " />
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
