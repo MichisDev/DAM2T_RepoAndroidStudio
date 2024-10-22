@@ -25,13 +25,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // DALE memoria a myBinding
+        // DA memoria a myBinding
         myBinding = ActivityMainBinding.inflate(layoutInflater)
 
+        // // muestra la vista
         setContentView(myBinding.root)
 
 
-        // setContentView(R.layout.activity_main)
+        // setContentView(R.layout.activity_main) SE QUITA POR EL BINDING
+
+        // funcion lambda que recibe una vista y los insets y devuelve los insets.
+        // esta funcion se usa para ajustar la vista al tamaño de la pantalla (margenes)
         ViewCompat.setOnApplyWindowInsetsListener(myBinding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -40,7 +44,8 @@ class MainActivity : AppCompatActivity() {
 
         // formas de mostrar con binding y sin el
         val miTag = "Michelle"
-        /*val btAceptar = findViewById<Button>(R.id.btAceptar)
+        /*
+        val btAceptar = findViewById<Button>(R.id.btAceptar)
         val btBorrar = findViewById<Button>(R.id.btBorrar)
         val ptNombre = findViewById<EditText>(R.id.ptNombre)
         */
@@ -76,7 +81,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         // cambiar el icono al pinchar en la imagen
-        myBinding.imgIconoBurger.setOnClickListener{myBinding.imgIconoBurger.setImageResource(imagen3)}
+        myBinding.imgIconoBurger.setOnClickListener {
+            myBinding.imgIconoBurger.setImageResource(
+                imagen3
+            )
+        }
 
 
         //quiero pasar el mensaje del pedido con los ingredientes

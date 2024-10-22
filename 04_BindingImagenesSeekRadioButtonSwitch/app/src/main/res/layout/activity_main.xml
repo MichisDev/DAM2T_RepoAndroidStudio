@@ -45,12 +45,14 @@
         android:id="@+id/btAceptar"
         android:layout_width="127dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
         android:text="Aceptar"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btBorrar"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.303"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="52dp" />
+        app:layout_constraintVertical_bias="0.306"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btBorrar"
@@ -63,14 +65,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btAceptar"
         app:layout_constraintTop_toBottomOf="@+id/ptNombre"
-        app:layout_constraintVertical_bias="0.303"
+        app:layout_constraintVertical_bias="0.309"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imgIconoBurger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.372"
@@ -90,6 +93,7 @@
         android:id="@+id/imBtImagen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgIconoBurger"
@@ -139,33 +143,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="38dp"
         android:text="Queso"
-        app:layout_constraintBottom_toTopOf="@+id/btAceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chCebolla"
         app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.006" />
 
     <CheckBox
         android:id="@+id/chCebolla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="39dp"
         android:text="Cebollla"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chBacon"
         app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toEndOf="@+id/chQueso"
-        tools:layout_editor_absoluteY="382dp" />
+        app:layout_constraintTop_toBottomOf="@+id/ptNombre"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/chBacon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Bacon"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toEndOf="@+id/chCebolla"
-        tools:layout_editor_absoluteY="382dp" />
+        app:layout_constraintTop_toBottomOf="@+id/ptNombre"
+        app:layout_constraintVertical_bias="0.032" />
 
     <SeekBar
         android:id="@+id/seekBarSatisfaccion"
@@ -177,9 +191,8 @@
         android:thumb="@drawable/ic_pizza"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btBorrar"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btAceptar"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.747" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

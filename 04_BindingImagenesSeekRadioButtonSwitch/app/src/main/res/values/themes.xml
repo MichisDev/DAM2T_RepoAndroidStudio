@@ -5,5 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme._01_BindingImagenesSeekRadioButtonSwitch" parent="Base.Theme._01_BindingImagenesSeekRadioButtonSwitch" />
+    <style name="Theme._04_BindingImagenesSeekRadioButtonSwitch" parent="Base.Theme._01_BindingImagenesSeekRadioButtonSwitch" />
 </resources>

@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // Definicion de variables de boton y texto
         val miTag = "Michelle"
         val btAceptar = findViewById<Button>(R.id.btAceptar)
         val btBorrar = findViewById<Button>(R.id.btBorrar)
@@ -31,15 +32,19 @@ class MainActivity : AppCompatActivity() {
         btAceptar.setOnClickListener {
 
             // println(ptNombre.text).toString()
-           Log.i(miTag, "Hola${ptNombre.text}")
 
+            // La funcion Log.i() imprime en la consola de Android Studio
+            // es una funcion que se usa para registrar informacion en el logcat
+            Log.i(miTag, "Hola${ptNombre.text}")
+
+            // La funcion Toast.makeText() muestra un mensaje en pantalla
+            // es una funcion que se usa para mostrar un mensaje en pantalla
             Toast.makeText(this, "Hola ${ptNombre.text}", Toast.LENGTH_SHORT).show()
         }
 
         btBorrar.setOnClickListener {
             ptNombre.text.clear()
         }
-
 
 
     }

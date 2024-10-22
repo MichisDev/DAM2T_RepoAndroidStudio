@@ -11,9 +11,9 @@
 
     <FrameLayout
         android:id="@+id/frLayaout"
-        android:layout_width="319dp"
-        android:layout_height="112dp"
-        android:background="#009688"
+        android:layout_width="314dp"
+        android:layout_height="88dp"
+        android:background="#34D1C3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,166 @@
             android:id="@+id/tvFrLayaout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#009688"
             android:fontFamily="sans-serif-medium"
-            android:text="FrameLayout: Es como se colocaban las cosas antes mediante la propiedad layout_gravity de  los elementos. No se usa, al igual que el GridLayout que está en el apartado Legacy. " />
+            android:gravity="clip_horizontal|center_horizontal"
+            android:text="FrameLayout: Es como se colocaban las cosas antes mediante la propiedad layout_gravity de  los elementos. No se usa, al igual que el GridLayout que está en el apartado Legacy. "
+            android:textColor="#000000" />
     </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llLinearLayaoutHori"
+        android:layout_width="315dp"
+        android:layout_height="132dp"
+        android:background="#00BCD4"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frLayaout"
+        app:layout_constraintVertical_bias="0.026">
+
+        <TextView
+            android:id="@+id/tvLinearVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvHorizontal"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#03A9F4"
+            android:text=" LinearLayout: los objetos que colocas dentro se van disponiendo uno al lado del otro si es vertical, y los puedes separar con Space."
+            android:textColor="#263238" />
+
+        <TextView
+            android:id="@+id/tvHorizontal2"
+            android:layout_width="153dp"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            android:background="#3F51B5"
+            android:text=" LinearLayout: los objetos que colcas dentro se van disponiendo uno debajo de otro si es vertical, y los puedes separar con Space."
+            android:textColor="#CFD8DC" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llVertical"
+        android:layout_width="317dp"
+        android:layout_height="118dp"
+        android:background="#2196F3"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llLinearLayaoutHori"
+        app:layout_constraintVertical_bias="0.046">
+
+        <TextView
+            android:id="@+id/tvVertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4CAF50"
+            android:text=" LinearLayout: los objetos que colocas dentro se van disponiendo uno al lado del otro si es vertical, y los puedes separar con Space."
+            android:textColor="#263238" />
+
+        <TextView
+            android:id="@+id/tvVertical3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:text=" LinearLayout: los objetos que colocas dentro se van disponiendo uno al lado del otro si es vertical, y los puedes separar con Space."
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tlTableLAyout"
+        android:layout_width="313dp"
+        android:layout_height="159dp"
+        android:background="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llVertical"
+        app:layout_constraintVertical_bias="0.069">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTableLayout2"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="TableLayout: Para dar una disposición en forma de tabla. Se pueden añadir o eliminar filas (se  recomienda usar el ComponentTree. " />
+
+            <TextView
+                android:id="@+id/tvTableLayout"
+                android:layout_width="195dp"
+                android:layout_height="79dp"
+                android:text="TableLayout: Para dar una disposición en forma de tabla. Se pueden añadir o eliminar filas (se  recomienda usar el ComponentTree. " />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#009688">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#CE2222"
+                android:text="cosiiitas"
+                android:textColor="#E8EAF6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CDDC39">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8BC34A"
+                android:text="ee"
+                android:textColor="#424242" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clConstrainLaout"
+        android:layout_width="315dp"
+        android:layout_height="140dp"
+        android:background="#4B904E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tlTableLAyout">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="232dp"
+            android:layout_height="103dp"
+            android:text="ConstraintLayout:  i. El más usado actualmente. De hecho, ya viene como contenedor por defecto. Permite crear interfaces más complejas y flexibles que los anteriores. Se utilizan restricciones  para posicionar y redimensionar elementos y tiene mejor rendimiento respecto a las  disposiciones anidadas que salían utilizando los layouts anteriores (se pueden seguir  usando, pero se recomienda de manera puntual) ii. Se pueden combinar LinearLayouts, o TableLayout dentro de este para hacer  agrupamientos. iii. Además, se dispone de un editor visual en Android para crear las relaciones como  hemos visto en clase (posteriormente haréis un ejercicio sólo de esto) "
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.192"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.432" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

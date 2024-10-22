@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">01_BindingImagenesSeekRadioButtonSwitch</string>
+    <string name="app_name">04_BindingImagenesSeekRadioButtonSwitch</string>
     <string name="name">Name</string>
     <string name="nombre">Nombre</string>
 </resources>
