@@ -2,14 +2,8 @@ package com.example.ut01_04_encuestarecyclerview
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
 import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.SeekBar
-import android.widget.Switch
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,25 +15,8 @@ class MainActivity : AppCompatActivity() {
     // Constante para el binding
     private lateinit var binding: ActivityMainBinding
 
-    // Inicialización de la lista
+    // Inicialización de la lista de encuestas
     private val encuestas = mutableListOf<Encuesta>()
-
-    // Referencias a los componentes de la UI
-   private lateinit var eTNombre: EditText
-   private lateinit var etwNombre: TextView
-   private lateinit var swAnonimo: Switch
-   private lateinit var radioGroupSO: RadioGroup
-   private lateinit var ckDam: CheckBox
-   private lateinit var ckAsir: CheckBox
-   private lateinit var ckDaw: CheckBox
-   private lateinit var sbHoras: SeekBar
-   private lateinit var textViewResumen: TextView
-   private lateinit var btnValidar: Button
-   private lateinit var btnReiniciar: Button
-   private lateinit var btnCuantas: Button
-   private lateinit var btnResumen: Button
-   private lateinit var btnBorrar: Button
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,119 +28,111 @@ class MainActivity : AppCompatActivity() {
         // Configurar el comportamiento de Edge-to-Edge
         enableEdgeToEdge()
 
-        // Inicializar referencias a la UI
-        eTNombre = findViewById(R.id.eTNombre)
-        etwNombre = findViewById(R.id.tvwNombre)
-        swAnonimo = findViewById(R.id.swAnonimo)
-        radioGroupSO = findViewById(R.id.radioGroupSO)
-        ckDam = findViewById(R.id.ckDam)
-        ckAsir = findViewById(R.id.ckAsir)
-        ckDaw = findViewById(R.id.ckDaw)
-        sbHoras = findViewById(R.id.sbHoras)
-        btnValidar = findViewById(R.id.btValidar)
-        btnReiniciar = findViewById(R.id.btReiniciar)
-        btnCuantas = findViewById(R.id.btCuantas)
-        btnResumen = findViewById(R.id.btResumen)
-        btnBorrar = findViewById(R.id.btBorrar)
-
-
-
-        // Inicializa el EditText como habilitado
-        eTNombre.isEnabled = true
-
         // Configurar el listener para el botón "Validar"
-        btnValidar.setOnClickListener {
+        binding.btValidar.setOnClickListener {
             validarEncuesta()
         }
 
-        // Configurar otros botones (Reiniciar, Cuantas, Resumen,Borrar)
-        btnReiniciar.setOnClickListener { reiniciarEncuesta() }
-        btnCuantas.setOnClickListener { mostrarCantidadEncuestas() }
-        btnResumen.setOnClickListener { mostrarResumen() }
-        btnBorrar.setOnClickListener { borrarFormulario() }
+        // Configurar otros botones (Reiniciar, Cuantas, Resumen, Borrar)
+        binding.btReiniciar.setOnClickListener { reiniciarEncuesta() }
+        binding.btCuantas.setOnClickListener { mostrarCantidadEncuestas() }
+        binding.btResumen.setOnClickListener { mostrarResumen() }
+        binding.btBorrar.setOnClickListener { borrarFormulario() }
 
+        // Configurar el Switch para habilitar/deshabilitar el EditText
+        binding.swAnonimo.setOnCheckedChangeListener { _, isChecked ->
+            binding.eTNombre.isEnabled = !isChecked // Desactivar si anónimo
+            if (isChecked) {
+                binding.eTNombre.text.clear() // Limpiar nombre si anónimo
+            }
+        }
 
+        // Actualizar el TextView de horasEstudio al cambiar la SeekBar
+        binding.sbHoras.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                binding.tvHorasEstudio.text = getString(R.string.tvHorasEstudio).replace("4", progress.toString())
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
     }
 
+    // Borrar el formulario
     private fun borrarFormulario() {
-        // Limpiar todos los campos del formulario
-        eTNombre.text.clear()
-        swAnonimo.isChecked = false
-        radioGroupSO.clearCheck()
-        ckDam.isChecked = false
-        ckAsir.isChecked = false
-        ckDaw.isChecked = false
-        sbHoras.progress = 4 // Puedes establecer el valor que consideres predeterminado
+        binding.eTNombre.text.clear()
+        binding.swAnonimo.isChecked = false
+        binding.radioGroupSO.clearCheck()
+        binding.ckDam.isChecked = false
+        binding.ckAsir.isChecked = false
+        binding.ckDaw.isChecked = false
+        binding.sbHoras.progress = 4
 
         Toast.makeText(this, "Formulario borrado.", Toast.LENGTH_SHORT).show()
     }
 
+    // Mostrar el resumen en DetalleActivity
     private fun mostrarResumen() {
         val intent = Intent(this, DetalleActivity::class.java)
-        // Debes pasar la lista de encuestas al intent
-        // Puedes usar putParcelableArrayListExtra si Encuesta implementa Parcelable
-        // o usar putSerializable si Encuesta implementa Serializable
         intent.putExtra("encuestas", ArrayList(encuestas))
         startActivity(intent)
     }
 
+    // Mostrar la cantidad de encuestas realizadas
     private fun mostrarCantidadEncuestas() {
         Toast.makeText(this, "Se han realizado ${encuestas.size} encuestas.", Toast.LENGTH_SHORT).show()
     }
 
+    // Reiniciar la encuesta
     private fun reiniciarEncuesta() {
-        // Reiniciar todos los campos
-        eTNombre.text.clear()
-        swAnonimo.isChecked = false
-        radioGroupSO.clearCheck() // Limpiar la selección de radio buttons
-        ckDam.isChecked = false
-        ckAsir.isChecked = false
-        ckDaw.isChecked = false
-        sbHoras.progress = 4 // Reiniciar la barra de progreso a 4
-        textViewResumen.text = "" // Limpiar el resumen
+        binding.eTNombre.text.clear()
+        binding.swAnonimo.isChecked = false
+        binding.radioGroupSO.clearCheck()
+        binding.ckDam.isChecked = false
+        binding.ckAsir.isChecked = false
+        binding.ckDaw.isChecked = false
+        binding.sbHoras.progress = 4
 
-        // Limpiar la lista de encuestas
-        encuestas.clear() // Esto borra todas las encuestas
+        encuestas.clear()
 
         Toast.makeText(this, "Encuesta reiniciada.", Toast.LENGTH_SHORT).show()
     }
 
+    // Validar la encuesta
     private fun validarEncuesta() {
-        // Obtener los valores de los campos
-        val nombre = if (swAnonimo.isChecked) "Anónimo" else eTNombre.text.toString()
+        val nombre = if (binding.swAnonimo.isChecked) "Anónimo" else binding.eTNombre.text.toString()
         val sistemaOperativo = obtenerSOSeleccionado()
         val especialidadesSeleccionadas = obtenerEspecialidadesSeleccionadas()
-        val horasEstudio = sbHoras.progress
+        val horasEstudio = binding.sbHoras.progress
 
-        // Validar que los campos necesarios estén llenos
-        if (!swAnonimo.isChecked && nombre.isEmpty()) {
+        if (!binding.swAnonimo.isChecked && nombre.isEmpty()) {
             Toast.makeText(this, "Nombre necesario para validar.", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // Crear una nueva encuesta y agregarla a la lista
         val nuevaEncuesta = Encuesta(nombre, sistemaOperativo, especialidadesSeleccionadas, horasEstudio)
         encuestas.add(nuevaEncuesta)
 
-        // Mostrar un mensaje de que la encuesta fue almacenada
         Toast.makeText(this, "Encuesta almacenada.", Toast.LENGTH_SHORT).show()
 
-        // Ir a la siguiente actividad para mostrar detalles
         val intent = Intent(this, DetalleActivity::class.java)
-        intent.putExtra("encuesta", nuevaEncuesta) // Usando Serializable
+        intent.putExtra("encuesta", nuevaEncuesta)
         startActivity(intent)
     }
 
+    // Obtener el sistema operativo seleccionado
     private fun obtenerSOSeleccionado(): String {
-        val selectedId = radioGroupSO.checkedRadioButtonId
+        val selectedId = binding.radioGroupSO.checkedRadioButtonId
         val selectedRadioButton = findViewById<RadioButton>(selectedId)
         return selectedRadioButton?.text.toString()
     }
+
+    // Obtener las especialidades seleccionadas
     private fun obtenerEspecialidadesSeleccionadas(): List<String> {
         val especialidades = mutableListOf<String>()
-        if (ckDam.isChecked) especialidades.add(ckDam.text.toString())
-        if (ckAsir.isChecked) especialidades.add(ckAsir.text.toString())
-        if (ckDaw.isChecked) especialidades.add(ckDaw.text.toString())
+        if (binding.ckDam.isChecked) especialidades.add(binding.ckDam.text.toString())
+        if (binding.ckAsir.isChecked) especialidades.add(binding.ckAsir.text.toString())
+        if (binding.ckDaw.isChecked) especialidades.add(binding.ckDaw.text.toString())
         return especialidades
     }
 }

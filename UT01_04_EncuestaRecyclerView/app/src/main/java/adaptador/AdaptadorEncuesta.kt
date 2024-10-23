@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ut01_04_encuestarecyclerview.R
 import modelo.Encuesta
 
-class AdaptadorEncuesta(private val encuestas: List<Encuesta?>) :
+class AdaptadorEncuesta(private val encuestas: List<Encuesta>) :
     RecyclerView.Adapter<AdaptadorEncuesta.EncuestaViewHolder>() {
 
     // ViewHolder dentro de la clase AdaptadorEncuesta

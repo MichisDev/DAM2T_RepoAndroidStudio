@@ -4,6 +4,7 @@ import adaptador.AdaptadorEncuesta
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,19 +20,25 @@ class DetalleActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_detalle)
 
-        btVolver = findViewById(R.id.btVolver)
-        llDetalleEnc = findViewById(R.id.llDetalleEnc)
-
         // Configurar el RecyclerView
         val recyclerView: RecyclerView = findViewById(R.id.rvRecicler)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val encuesta: Encuesta? = intent.getSerializableExtra("encuesta") as? Encuesta
+        btVolver = findViewById(R.id.btVolver)
+        llDetalleEnc = findViewById(R.id.llDetalleEnc)
 
-        val encuestasList = listOf(encuesta)
-        val adapter = AdaptadorEncuesta(encuestasList)
 
-        recyclerView.adapter = adapter
+        // Obtener la lista de encuestas del Intent
+        val encuestas = intent.getSerializableExtra("encuestas") as? ArrayList<Encuesta>
+
+        // Verificar si la lista no es nula y configurar el adaptador
+        if (encuestas != null) {
+            val adaptador = AdaptadorEncuesta(encuestas) // Usa la lista de encuestas obtenida
+            recyclerView.adapter = adaptador
+        } else {
+            Toast.makeText(this, "No hay encuestas para mostrar", Toast.LENGTH_SHORT).show()
+        }
+
 
         // Configurar el botón de volver
         btVolver.setOnClickListener {
