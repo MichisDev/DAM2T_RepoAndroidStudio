@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tVwEncuesta"
+        android:layout_width="408dp"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimario"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/tvEncuestas"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvwNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="12dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tVwEncuesta"
+        tools:text="@string/tvwNombre" />
+
+
+    <EditText
+        android:id="@+id/eTNombre"
+        android:layout_width="242dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:enabled="false"
+        android:hint="@string/eTNombre"
+        android:minHeight="48dp"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvwNombre"
+        app:layout_constraintTop_toBottomOf="@id/tVwEncuesta" />
+
+    <Switch
+        android:id="@+id/swAnonimo"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        android:text="@string/swAnonimo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwNombre" />
+
+    <TextView
+        android:id="@+id/tvwAnonimo"
+        android:layout_width="230dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/swAnonimo"
+        app:layout_constraintTop_toBottomOf="@+id/eTNombre"
+        tools:text="@string/tvwAnonimo" />
+
+    <TextView
+        android:id="@+id/tVSOpertivo"
+        android:layout_width="225dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tVOperativo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/swAnonimo" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSO"
+        android:layout_width="364dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tVSOpertivo">
+
+        <RadioButton
+            android:id="@+id/rbMac"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rcMac" />
+
+        <RadioButton
+            android:id="@+id/rbWindows"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rbWindows" />
+
+        <RadioButton
+            android:id="@+id/rbLinux"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/rbLinux"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tVEspecialidad"
+        android:layout_width="112dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tVEspecialidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupSO" />
+
+    <CheckBox
+        android:id="@+id/ckAsir"
+        android:layout_width="70dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/ckAsir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ckDaw"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ckDam"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSO"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/ckDam"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/ckDam"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ckAsir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSO"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/ckDaw"
+        android:layout_width="69dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/ckDaw"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ckAsir"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSO"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/tvHorasEstudio"
+        android:layout_width="165dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvHorasEstudio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ckDam" />
+
+    <SeekBar
+        android:id="@+id/sbHoras"
+        android:layout_width="366dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="16dp"
+        android:max="10"
+        android:progress="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHorasEstudio" />
+
+
+    <!-- Fila de botones: Validar, Cuantas y Resumen -->
+    <LinearLayout
+        android:id="@+id/buttonRow1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sbHoras">
+
+        <Button
+            android:id="@+id/btValidar"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorBotones"
+            android:text="@string/btValidar"
+            android:textColor="@color/colorTexto"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btCuantas"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorBotones"
+            android:text="@string/btCuantas"
+            android:textColor="@color/colorTexto"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btResumen"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorBotones"
+            android:text="@string/btResumen"
+            android:textColor="@color/colorTexto"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <!-- Fila de botones: Borrar y Reiniciar -->
+    <LinearLayout
+        android:id="@+id/buttonRow2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonRow1">
+
+        <Button
+            android:id="@+id/btBorrar"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorBotones"
+            android:text="Borrar"
+            android:textColor="@color/colorTexto"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btReiniciar"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorBotones"
+            android:text="@string/btReiniciar"
+            android:textColor="@color/colorTexto"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

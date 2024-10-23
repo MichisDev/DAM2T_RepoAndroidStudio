@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">UT01_04_EncuestaRecyclerView</string>
+    <string name="tvEncuestas">Encuesta</string>
+    <string name="eTNombre">Tu Nombre</string>
+    <string name="swAnonimo">Anonimo</string>
+    <string name="tVOperativo">Sistema Operativo Preferido</string>
+    <string name="rcMac">Mac</string>
+    <string name="rbWindows">Windows</string>
+    <string name="rbLinux">Linux</string>
+    <string name="tVEspecialidad">"Especialidad: "</string>
+    <string name="ckDam">DAM</string>
+    <string name="ckAsir">ASIR</string>
+    <string name="ckDaw">DAW</string>
+    <string name="tvHorasEstudio">Horas de estudio : 4</string>
+    <string name="btValidar">Validar</string>
+    <string name="btReiniciar">Reiniciar</string>
+    <string name="btCuantas">Cuantas</string>
+    <string name="btResumen">Resumen</string>
+    <string name="btVolver" >Volver</string>
+    <string name="tvwNombre">Nombre: </string>
+    <string name="tvwAnonimo">Activar si se desea que tu nombre sea anónimo</string>
+    <string name="tVDetalleEncuesta">Detalle de la encuesta</string>
+</resources>
