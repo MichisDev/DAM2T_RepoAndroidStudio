@@ -6,23 +6,18 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_iconoencuesta"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_iconoencuesta_round"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Base.Theme.UT01_Tarea_04_Calculadora"
+        android:theme="@style/Theme.UT02_01_TresEnRaya"
         tools:targetApi="31">
-
-        <activity
-            android:name=".DetalleActivity"
-            android:exported="false" /> <!-- Exported a false si no se inicia directamente -->
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <!-- Para señalar cuan es el principal -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

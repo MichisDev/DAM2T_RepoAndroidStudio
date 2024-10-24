@@ -5,18 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorFondo"
+
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tVEncuesta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimario"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="@string/tvEncuestas"
-        android:textColor="@color/white"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,9 +147,7 @@
             android:layout_width="0dp"
             android:layout_height="42dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/colorBotones"
             android:text="@string/btValidar"
-            android:textColor="@color/colorTexto"
             android:layout_weight="1" />
 
         <Button
@@ -159,18 +155,14 @@
             android:layout_width="0dp"
             android:layout_height="42dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/colorBotones"
             android:text="@string/btCuantas"
-            android:textColor="@color/colorTexto"
             android:layout_weight="1" />
 
         <Button
             android:id="@+id/btResumen"
             android:layout_width="0dp"
             android:layout_height="42dp"
-            android:backgroundTint="@color/colorBotones"
             android:text="@string/btResumen"
-            android:textColor="@color/colorTexto"
             android:layout_weight="1" />
     </LinearLayout>
 
@@ -189,18 +181,16 @@
             android:layout_width="0dp"
             android:layout_height="42dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/colorBotones"
+
             android:text="Borrar"
-            android:textColor="@color/colorTexto"
+
             android:layout_weight="1" />
 
         <Button
             android:id="@+id/btReiniciar"
             android:layout_width="0dp"
             android:layout_height="42dp"
-            android:backgroundTint="@color/colorBotones"
             android:text="@string/btReiniciar"
-            android:textColor="@color/colorTexto"
             android:layout_weight="1" />
     </LinearLayout>
 
@@ -208,7 +198,6 @@
         android:id="@+id/textViewResumen"
         android:layout_width="450dp"
         android:layout_height="198dp"
-        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
