@@ -20,7 +20,9 @@
     <color name="md_theme_onError">#FFFFFF</color>
     <color name="md_theme_errorContainer">#FFDAD6</color>
     <color name="md_theme_onErrorContainer">#410002</color>
-    <color name="md_theme_background">#FEF7FF</color>
+    <!--<color name="md_theme_background">#FEF7FF</color>-->
+    <!--<color name="md_theme_background">#FF0000</color>-->
+    <color name="md_theme_background">#FF000000</color>
     <color name="md_theme_onBackground">#1D1B20</color>
     <color name="md_theme_surface">#FEF7FF</color>
     <color name="md_theme_onSurface">#1D1B20</color>

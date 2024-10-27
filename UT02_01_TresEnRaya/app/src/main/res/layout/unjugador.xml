@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_onPrimaryFixedVariant">
 
     <LinearLayout
         android:id="@+id/llPrinc"
         android:layout_width="347dp"
         android:layout_height="676dp"
-        android:background="@android:color/holo_green_light"
         android:orientation="vertical"
+        android:background="@color/md_theme_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,14 +133,17 @@
                     android:layout_width="5dp"
                     android:layout_height="46dp"
                     android:layout_weight="1"
-                    android:text="JUGADOR:" />
+                    android:text="JUGADOR:"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/md_theme_surfaceContainerHighest"/>
 
                 <TextView
                     android:id="@+id/tvJ1"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@color/md_theme_surfaceContainerHighest" />
 
 
             </LinearLayout>
@@ -156,14 +160,17 @@
                     android:layout_width="5dp"
                     android:layout_height="46dp"
                     android:layout_weight="1"
-                    android:text="MAQUINA:" />
+                    android:paddingLeft="10dp"
+                    android:text="MAQUINA:"
+                    android:textColor="@color/md_theme_surfaceContainerHighest"/>
 
                 <TextView
                     android:id="@+id/tvJ2"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@color/md_theme_surfaceContainerHighest" />
 
 
             </LinearLayout>
@@ -177,17 +184,20 @@
 
                 <TextView
                     android:id="@+id/tveEmpates"
-                    android:layout_width="86dp"
+                    android:layout_width="5dp"
                     android:layout_height="46dp"
                     android:layout_weight="1"
-                    android:text="EMPATES:" />
+                    android:text="EMPATES:"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/md_theme_surfaceContainerHighest" />
 
                 <TextView
                     android:id="@+id/tvEmp"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@color/md_theme_surfaceContainerHighest" />
 
 
             </LinearLayout>
@@ -195,11 +205,13 @@
 
         <Button
             android:id="@+id/btVolver"
+            style="@style/misbotones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Volver" />
+            android:text="Volver"
+            app:rippleColor="#FF5722" />
     </LinearLayout>
 
 

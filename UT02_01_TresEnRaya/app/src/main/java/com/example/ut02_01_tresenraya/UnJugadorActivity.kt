@@ -82,7 +82,7 @@ class UnJugadorActivity : AppCompatActivity() {
 
                             turnoMaquina()// Ejecuta el turno de la máquina
 
-                        }, 3000) // 3000 milisegundos = 3 segundo
+                        }, 2000) // 2000 milisegundos = 2 segundo
                     }
                 }
             }
