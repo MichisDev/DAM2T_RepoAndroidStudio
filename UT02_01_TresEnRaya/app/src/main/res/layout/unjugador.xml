@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llPrinc"
+        android:layout_width="347dp"
+        android:layout_height="676dp"
+        android:background="@android:color/holo_green_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llUno"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivUno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/p_esq" />
+
+            <ImageView
+                android:id="@+id/ivDos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/p_esq" />
+
+            <ImageView
+                android:id="@+id/ivTres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/p_esq" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDos"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="197dp">
+
+            <ImageView
+                android:id="@+id/ivCuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/p_esq" />
+
+            <ImageView
+                android:id="@+id/ivCinco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/p_esq" />
+
+            <ImageView
+                android:id="@+id/ivSeis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/p_esq" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTres"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="319dp">
+
+            <ImageView
+                android:id="@+id/ivSiete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/p_esq" />
+
+            <ImageView
+                android:id="@+id/ivOcho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/p_esq" />
+
+            <ImageView
+                android:id="@+id/ivNueve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/p_esq" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMarcadores"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="443dp">
+
+            <LinearLayout
+                android:id="@+id/llMarcador1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvEJugador1"
+                    android:layout_width="5dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:text="JUGADOR:" />
+
+                <TextView
+                    android:id="@+id/tvJ1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMarcador2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvEJugador2"
+                    android:layout_width="5dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:text="MAQUINA:" />
+
+                <TextView
+                    android:id="@+id/tvJ2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMarcador3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tveEmpates"
+                    android:layout_width="86dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:text="EMPATES:" />
+
+                <TextView
+                    android:id="@+id/tvEmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btVolver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Volver" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

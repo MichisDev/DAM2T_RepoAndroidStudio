@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">UT02_01_TresEnRaya</string>
+    <string name="app_name">TresEnRaya</string>
+    <string name="btUnJugador">UN JUGADOR</string>
+    <string name="bt_DosJugadores" >DOS JUGADORES</string>
+    <string name="btSalir" >SALIR</string>
 </resources>
