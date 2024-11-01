@@ -120,18 +120,18 @@ class UnJugadorActivity : AppCompatActivity() {
         }
     }
 
-    private fun haGanado(symbol: String): Boolean {
+    private fun haGanado(simbolo: String): Boolean {
         // Comprueba si el jugador ha ganado
         for (i in 0..2) {
             // Comprueba filas
-            if (tablero[i][0] == symbol && tablero[i][1] == symbol && tablero[i][2] == symbol) return true
+            if (tablero[i][0] == simbolo && tablero[i][1] == simbolo && tablero[i][2] == simbolo) return true
             // Comprueba columnas
-            if (tablero[0][i] == symbol && tablero[1][i] == symbol && tablero[2][i] == symbol) return true
+            if (tablero[0][i] == simbolo && tablero[1][i] == simbolo && tablero[2][i] == simbolo) return true
         }
         // Comprueba diagonal principal
-        if (tablero[0][0] == symbol && tablero[1][1] == symbol && tablero[2][2] == symbol) return true
+        if (tablero[0][0] == simbolo && tablero[1][1] == simbolo && tablero[2][2] == simbolo) return true
         // Comprueba diagonal secundaria
-        if (tablero[0][2] == symbol && tablero[1][1] == symbol && tablero[2][0] == symbol) return true
+        if (tablero[0][2] == simbolo && tablero[1][1] == simbolo && tablero[2][0] == simbolo) return true
         return false
     }
 
