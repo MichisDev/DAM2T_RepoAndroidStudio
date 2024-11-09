@@ -24,14 +24,15 @@
 
     <TextView
         android:id="@+id/tvwNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
+        android:layout_width="107dp"
+        android:layout_height="37dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:textSize="12dp"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tVwEncuesta"
+        tools:ignore="TextSizeCheck"
         tools:text="@string/tvwNombre" />
 
 

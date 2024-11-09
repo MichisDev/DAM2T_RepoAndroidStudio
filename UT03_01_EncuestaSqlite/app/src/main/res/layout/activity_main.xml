@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llPrincipal"
+        android:layout_width="387dp"
+        android:layout_height="704dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.496">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="ENCUESTA" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/llSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <Switch
+                android:id="@+id/swAnonimo"
+                android:layout_width="164dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="8dp"
+                android:text="Anonimo"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/tvAnonimo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Activar si se desea que tu nombre sea anónimo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tVSOpertivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:text="Elige tu Sistema Operativo favorito" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupSO"
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/rbMac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mac" />
+
+            <RadioButton
+                android:id="@+id/rbWindows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Windows" />
+
+            <RadioButton
+                android:id="@+id/rbLinux"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Linux"
+                tools:ignore="TouchTargetSizeCheck" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tVEspecialidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:text="Elige tu especialidad o especialidades:" />
+
+        <LinearLayout
+            android:id="@+id/llEspecialidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <CheckBox
+                android:id="@+id/ckDaw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DAW" />
+
+            <CheckBox
+                android:id="@+id/ckDam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DAM" />
+
+            <CheckBox
+                android:id="@+id/ckAsir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ASIR" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvHorasEstudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:text="Elige tus horas de estudio:" />
+
+        <SeekBar
+            android:id="@+id/sbHoras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp" />
+
+        <!-- Fila de botones: Validar, Cuantas y Resumen -->
+        <LinearLayout
+            android:id="@+id/filaBotones1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/btValidar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Validar" />
+
+            <Button
+                android:id="@+id/btCuantas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cuantas" />
+
+            <Button
+                android:id="@+id/btResumen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Resumen" />
+        </LinearLayout>
+
+        <!-- Fila de botones: Borrar y reiniciar -->
+        <LinearLayout
+            android:id="@+id/filaBotones2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/btBorrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Borrar" />
+
+            <Button
+                android:id="@+id/btReiniciar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reiniciar" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

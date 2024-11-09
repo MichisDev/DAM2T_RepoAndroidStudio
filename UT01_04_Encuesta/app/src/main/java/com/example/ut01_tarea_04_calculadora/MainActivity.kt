@@ -2,6 +2,7 @@ package com.example.ut01_tarea_04_calculadora
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings.Global.getString
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -11,10 +12,8 @@ import android.widget.SeekBar
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.compose.ui.semantics.text
+
 import com.example.ut01_tarea_04_calculadora.databinding.ActivityMainBinding
 import modelo.Encuesta
 
@@ -42,11 +41,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textViewResumen: TextView
     private lateinit var horasEstudio: TextView
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        // inicializamos el binding inflamos
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -91,7 +88,7 @@ class MainActivity : AppCompatActivity() {
         // Actulizar el textView de horasEstudio al cambiar la seekBar
         sbHoras.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                horasEstudio.text = getString(R.string.tvHorasEstudio).replace("4", progress.toString())
+                horasEstudio.text = getString(R.string.tvHorasEstudio, progress)
             }
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
