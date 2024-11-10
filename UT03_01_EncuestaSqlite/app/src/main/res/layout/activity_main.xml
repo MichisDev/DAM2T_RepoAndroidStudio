@@ -71,7 +71,7 @@
             android:text="Elige tu Sistema Operativo favorito" />
 
         <RadioGroup
-            android:id="@+id/radioGroupSO"
+            android:id="@+id/rgSO"
             android:layout_width="match_parent"
             android:layout_height="143dp"
             android:layout_marginTop="8dp">
@@ -157,26 +157,35 @@
             android:paddingStart="8dp"
             android:paddingTop="8dp">
 
-            <Button
-                android:id="@+id/btValidar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Validar" />
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/alternarBotones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/btCuantas"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Cuantas" />
+                <Button
+                    android:id="@+id/btValidar"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Validar" />
 
-            <Button
-                android:id="@+id/btResumen"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Resumen" />
+                <Button
+                    android:id="@+id/btCuantas"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Cuantas" />
+
+                <Button
+                    android:id="@+id/btResumen"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Resumen" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
         </LinearLayout>
 
         <!-- Fila de botones: Borrar y reiniciar -->
@@ -189,6 +198,7 @@
 
             <Button
                 android:id="@+id/btBorrar"
+                style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -196,6 +206,7 @@
 
             <Button
                 android:id="@+id/btReiniciar"
+                style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
