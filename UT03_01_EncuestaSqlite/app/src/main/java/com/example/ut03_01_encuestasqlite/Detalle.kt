@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import auxiliar.Conexion
+import conexion.AdminSQLiteConexion
 import modelo.Encuesta
 
 class Detalle : AppCompatActivity(){
@@ -36,21 +38,15 @@ class Detalle : AppCompatActivity(){
 
         // Cofiguramos el reciclerView
         rvEncuestas.layoutManager = LinearLayoutManager(this)
+
+        // Obtener las encuestas almacenadas en la base de datos
+        val dbHelper = AdminSQLiteConexion(this)
+        encuestas = Conexion.obtenerEncuestas(dbHelper) as MutableList<Encuesta>
+
         // Configurar el adaptador
         adaptador = VistaAdaptador(encuestas)
         rvEncuestas.adapter = adaptador
 
-
-        // Recuperamos la encuesta pasada por el intent
-        val encuesta = intent.getSerializableExtra("encuesta") as? MutableList<Encuesta>
-
-        // Si la encuesta no es nula, la añadimos a la lista de encuestas
-        if (encuesta != null) {
-            encuestas.addAll(encuesta)
-            adaptador.notifyDataSetChanged()
-        }else{
-            Toast.makeText(this, "No se ha podido recuperar la encuesta", Toast.LENGTH_SHORT).show()
-        }
 
         // Volvemos a la activity anterior
         btVolver.setOnClickListener {

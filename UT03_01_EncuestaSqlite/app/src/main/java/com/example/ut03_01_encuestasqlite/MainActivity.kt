@@ -9,8 +9,10 @@ import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import auxiliar.Conexion
 
 import com.example.ut03_01_encuestasqlite.databinding.ActivityMainBinding
+import conexion.AdminSQLiteConexion
 import modelo.Encuesta
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +29,20 @@ class MainActivity : AppCompatActivity() {
 
         // Inicializar la lista de encuestas
         encuestas = mutableListOf()
+
+        // Configurar el listener para el sw anonimo
+        binding.swAnonimo.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                binding.tvNombre.text?.clear()  // Limpia el campo de nombre si se activa el modo anónimo
+                binding.tvNombre.isEnabled = false
+                binding.tvNombre.inputType =
+                    android.text.InputType.TYPE_NULL // Desactiva el teclado
+            } else {
+                binding.tvNombre.isEnabled = true
+                binding.tvNombre.inputType =
+                    android.text.InputType.TYPE_CLASS_TEXT // Restaura el teclado
+            }
+        }
 
         // Configurar los listeners de los botones
         binding.btValidar.setOnClickListener {
@@ -91,27 +107,41 @@ class MainActivity : AppCompatActivity() {
     private fun validarEncuesta() {
 
         // Obtener los datos de la encuesta
-        val nombre = binding.tvNombre.text.toString()
+        var nombre = binding.tvNombre.text.toString()
         val anonimo = binding.swAnonimo.isChecked
         val so = obtenerSOSeleccionado()
-        val especialidad = obtenerEspecialidadesSeleccionadas()
+        val especialidades = obtenerEspecialidadesSeleccionadas()
         val horas = binding.sbHoras.progress
 
-        // Validar nombre y anonimo vacios
-        if (nombre.isEmpty() || (anonimo && nombre.isEmpty())) {
+        // Validar nombre: Si el modo anónimo está activado, el nombre se considera como "Anónimo"
+        if (anonimo) {
+            nombre = "Anonimo" // Si está marcado como anónimo, el nombre se almacena como "Anonimo"
+        }
+
+        // Si el modo anónimo no está activado y el campo nombre está vacío, mostramos un mensaje de error
+        if (!anonimo && nombre.isEmpty()) {
             Toast.makeText(this, "El nombre no puede estar vacío", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // Crear un objeto encuesta
-        val nuevaEncuesta = Encuesta(nombre, anonimo, so, especialidad, horas)
+        // Crear un objeto encuesta con los datos validados
+        val nuevaEncuesta = Encuesta(nombre = nombre, SO = so, especialidad = especialidades, horasEstudio = horas)
 
-        // Añadir la encuesta a la lista
-        encuestas.add(nuevaEncuesta)
+        // Guardar la encuesta en la base de datos
+        val dbHelper = AdminSQLiteConexion(this)
+        val result = Conexion.insertarEncuesta(dbHelper, nuevaEncuesta)
 
-        // Mostrar un mensaje de éxito
-        Toast.makeText(this, "Encuesta validada correctamente", Toast.LENGTH_SHORT).show()
+        // Comprobar si la encuesta se insertó correctamente
+        if (result != -1L) {
+            // Añadir la encuesta a la lista en memoria (si se mantiene una lista de encuestas en la actividad)
+            encuestas.add(nuevaEncuesta)
 
+            // Mostrar un mensaje de éxito
+            Toast.makeText(this, "Encuesta validada y almacenada correctamente", Toast.LENGTH_SHORT).show()
+        } else {
+            // Si hubo un error al insertar en la base de datos
+            Toast.makeText(this, "Error al almacenar la encuesta", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
