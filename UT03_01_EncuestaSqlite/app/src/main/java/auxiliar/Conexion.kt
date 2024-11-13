@@ -25,7 +25,8 @@ object Conexion {
             // Insertamos el registro en la tabla Encuesta
             resultado = db.insert("Encuesta", null, values)
 
-            db.setTransactionSuccessful()  // Confirmar la transacción si todo fue exitoso
+            // Confirmar la transacción
+            db.setTransactionSuccessful()
         } catch (e: Exception) {
             e.printStackTrace()  // Captura cualquier error y lo muestra en el log
         } finally {

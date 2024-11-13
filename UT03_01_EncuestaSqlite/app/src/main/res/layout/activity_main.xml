@@ -20,16 +20,22 @@
 
         <TextView
             android:id="@+id/tvTitulo"
+            style="@style/Widget.Material3.MaterialTimePicker.Display.HelperText"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
+            android:background="@color/black"
+            android:backgroundTint="@color/md_theme_inversePrimary"
             android:gravity="center"
-            android:text="ENCUESTA" />
+            android:text="@string/tvTitulo"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/outlinedTextField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre">
+            android:hint="@string/hint_nombre">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tvNombre"
@@ -51,7 +57,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:paddingStart="8dp"
-                android:text="Anonimo"
+                android:text="@string/swAnonimo"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
@@ -59,7 +65,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Activar si se desea que tu nombre sea anónimo" />
+                android:gravity="center"
+                android:text="@string/tvAnonimo"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <TextView
@@ -68,7 +76,8 @@
             android:layout_height="wrap_content"
             android:paddingStart="8dp"
             android:paddingTop="8dp"
-            android:text="Elige tu Sistema Operativo favorito" />
+            android:text="@string/tVSOpertivo"
+            android:textStyle="bold" />
 
         <RadioGroup
             android:id="@+id/rgSO"
@@ -80,20 +89,20 @@
                 android:id="@+id/rbMac"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mac" />
+                android:text="@string/rbMac" />
 
             <RadioButton
                 android:id="@+id/rbWindows"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Windows" />
+                android:text="@string/rbWindows" />
 
             <RadioButton
                 android:id="@+id/rbLinux"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:text="Linux"
+                android:text="@string/rbLinux"
                 tools:ignore="TouchTargetSizeCheck" />
         </RadioGroup>
 
@@ -103,7 +112,8 @@
             android:layout_height="wrap_content"
             android:paddingStart="8dp"
             android:paddingTop="8dp"
-            android:text="Elige tu especialidad o especialidades:" />
+            android:text="@string/tVEspecialidad"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/llEspecialidad"
@@ -117,21 +127,21 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="DAW" />
+                android:text="@string/ckDaw" />
 
             <CheckBox
                 android:id="@+id/ckDam"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="DAM" />
+                android:text="@string/ckDam" />
 
             <CheckBox
                 android:id="@+id/ckAsir"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ASIR" />
+                android:text="@string/ckAsir" />
         </LinearLayout>
 
         <TextView
@@ -140,7 +150,8 @@
             android:layout_height="wrap_content"
             android:paddingStart="8dp"
             android:paddingTop="8dp"
-            android:text="Elige tus horas de estudio:" />
+            android:text="@string/tvHorasEstudio"
+            android:textStyle="bold" />
 
         <SeekBar
             android:id="@+id/sbHoras"
@@ -166,29 +177,32 @@
                     android:id="@+id/btValidar"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Validar" />
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/md_theme_inversePrimary"
+                    android:text="@string/btValidar" />
 
                 <Button
                     android:id="@+id/btCuantas"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Cuantas" />
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/md_theme_inversePrimary"
+                    android:text="@string/btCuantas" />
 
                 <Button
                     android:id="@+id/btResumen"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Resumen" />
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/md_theme_inversePrimary"
+                    android:text="@string/btResumen" />
             </com.google.android.material.button.MaterialButtonToggleGroup>
         </LinearLayout>
 
-        <!-- Fila de botones: Borrar y reiniciar -->
+        <!-- Fila de botones: Borrar reiniciar y slir -->
         <LinearLayout
             android:id="@+id/filaBotones2"
             android:layout_width="match_parent"
@@ -202,7 +216,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Borrar" />
+                android:backgroundTint="@color/md_theme_outlineVariant"
+                android:spacing="8dp"
+                android:text="@string/btBorrar" />
 
             <Button
                 android:id="@+id/btReiniciar"
@@ -210,7 +226,19 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Reiniciar" />
+                android:backgroundTint="@color/md_theme_outlineVariant"
+                android:spacing="8dp"
+                android:text="@string/btReiniciar" />
+
+            <Button
+                android:id="@+id/btSalir"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/md_theme_outlineVariant"
+                android:spacing="8dp"
+                android:text="@string/btSalir" />
 
 
         </LinearLayout>

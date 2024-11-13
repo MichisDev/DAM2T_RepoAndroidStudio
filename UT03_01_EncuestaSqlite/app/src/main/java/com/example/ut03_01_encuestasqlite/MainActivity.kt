@@ -5,6 +5,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.RadioButton
+import android.widget.SeekBar
 import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         // Inicializar la lista de encuestas
         encuestas = mutableListOf()
 
+
         // Configurar el listener para el sw anonimo
         binding.swAnonimo.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -43,6 +45,7 @@ class MainActivity : AppCompatActivity() {
                     android.text.InputType.TYPE_CLASS_TEXT // Restaura el teclado
             }
         }
+
 
         // Configurar los listeners de los botones
         binding.btValidar.setOnClickListener {
@@ -60,6 +63,24 @@ class MainActivity : AppCompatActivity() {
         binding.btReiniciar.setOnClickListener {
             reiniciarEncuestas()
         }
+        binding.btSalir.setOnClickListener {
+            salir()
+        }
+
+    }
+
+    private fun salir() {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("¿Seguro que quieres salir de la aplicación?")
+            .setCancelable(false)
+            .setPositiveButton("Sí") { dialog, id ->
+                finish()  // Cierra la actividad si el usuario confirma
+            }
+            .setNegativeButton("No") { dialog, id ->
+                dialog.cancel()  // Cancela el diálogo y no cierra la aplicación
+            }
+        val alert = builder.create()
+        alert.show()
     }
 
     private fun reiniciarEncuestas() {
@@ -94,6 +115,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    // Cuenta las realizadas desde el momento de iniciar la app
     private fun cuantasEncuestas() {
 
         // Mostrar un alert dialog con el número de encuestas

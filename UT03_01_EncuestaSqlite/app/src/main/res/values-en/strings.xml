@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EncuestaSqlite</string>
+    <string name="tvTitulo">SURVEY</string>
+    <string name="hint_nombre">Name</string>
+    <string name="swAnonimo">Anonymous</string>
+    <string name="tvAnonimo">Activate if you want your name to be anonymous</string>
+    <string name="tVSOpertivo">Choose your favorite Operating System</string>
+    <string name="rbMac">Mac</string>
+    <string name="rbWindows">Windows</string>
+    <string name="rbLinux">Linux</string>
+    <string name="tVEspecialidad">Choose your specialty or specialties:</string>
+    <string name="ckDaw">DAW</string>
+    <string name="ckDam">DAM</string>
+    <string name="ckAsir">ASIR</string>
+    <string name="tvHorasEstudio">Choose your study hours:</string>
+    <string name="btValidar">Validate</string>
+    <string name="btCuantas">How many</string>
+    <string name="btResumen">Summary</string>
+    <string name="btBorrar">Clear</string>
+    <string name="btReiniciar">Restart</string>
+    <string name="btSalir">Exit</string>
+    <string name="tvTitDet">Completed Surveys</string>
+    <string name="btVolver">Back</string>
+</resources>

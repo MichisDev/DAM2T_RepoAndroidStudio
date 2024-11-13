@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">UT03_01_EncuestaSqlite</string>
+    <string name="app_name">EncuestaSqlite</string>
+    <string name="tvTitulo">ENCUESTA</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="swAnonimo">Anonimo</string>
+    <string name="tvAnonimo">Activar si se desea que tu nombre sea anónimo</string>
+    <string name="tVSOpertivo">Elige tu Sistema Operativo favorito</string>
+    <string name="rbMac">Mac</string>
+    <string name="rbWindows">Windows</string>
+    <string name="rbLinux">Linux</string>
+    <string name="tVEspecialidad">Elige tu especialidad o especialidades:</string>
+    <string name="ckDaw">DAW</string>
+    <string name="ckDam">DAM</string>
+    <string name="ckAsir">ASIR</string>
+    <string name="tvHorasEstudio">Elige tus horas de estudio:</string>
+    <string name="btValidar">Validar</string>
+    <string name="btCuantas">Cuantas</string>
+    <string name="btResumen">Resumen</string>
+    <string name="btBorrar">Borrar</string>
+    <string name="btReiniciar">Reiniciar</string>
+    <string name="btSalir">Salir</string>
+    <string name="tvTitDet">Encuestas Realizadas</string>
+    <string name="btVolver">Volver</string>
 </resources>
