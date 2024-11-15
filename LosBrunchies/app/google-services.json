@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "148996239151",
+    "project_id": "los-brunchies",
+    "storage_bucket": "los-brunchies.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148996239151:android:e7356f203b365b393dfbda",
+        "android_client_info": {
+          "package_name": "com.example.losbrunchies"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfP7KUh_SNKQGakBbJJZrb2oSERB410UE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
