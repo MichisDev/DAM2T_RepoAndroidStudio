@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Seleccion">
+    tools:context=".Home">
 
     <LinearLayout
         android:id="@+id/llselecion"
@@ -34,5 +34,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="BATALLA" />
+
+        <Button
+            android:id="@+id/bt_cerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar sesion" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
