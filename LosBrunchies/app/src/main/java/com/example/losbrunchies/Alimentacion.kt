@@ -5,16 +5,21 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.losbrunchies.databinding.ActivityAlimentacionBinding
 
 class Alimentacion : AppCompatActivity() {
+    private lateinit var binding: ActivityAlimentacionBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_alimentacion)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        binding = ActivityAlimentacionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        // Configurar el botón de volver al home
+        binding.btVol.setOnClickListener {
+            finish()
         }
+
     }
 }

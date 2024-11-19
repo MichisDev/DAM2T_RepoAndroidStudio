@@ -12,6 +12,7 @@
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:orientation="vertical"
+        android:background="@drawable/huevo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,16 +22,16 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/principal" />
+            app:srcCompat="@drawable/huevo" />
 
         <Button
-            android:id="@+id/bt_ali"
+            android:id="@+id/btAli"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ALIMENTACION" />
 
         <Button
-            android:id="@+id/bt_bt"
+            android:id="@+id/btBt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="BATALLA" />
@@ -41,4 +42,5 @@
             android:layout_height="wrap_content"
             android:text="Cerrar sesion" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

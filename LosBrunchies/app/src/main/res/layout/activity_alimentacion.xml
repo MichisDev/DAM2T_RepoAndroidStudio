@@ -55,7 +55,13 @@
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="match_parent"
+            android:layout_height="408dp"
+            app:srcCompat="@drawable/per1" />
+
+        <Button
+            android:id="@+id/btVol"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/principal" />
+            android:text="Volver" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

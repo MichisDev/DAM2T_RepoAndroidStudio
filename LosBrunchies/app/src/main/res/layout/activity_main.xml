@@ -7,50 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:id="@+id/llprincipal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/juntos"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/tvTitulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Los brunchies"
-            android:textSize="54sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/principal" />
-
-        <Button
-            android:id="@+id/bt_iniGoo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Conectar con Google" />
-
-        <Button
-            android:id="@+id/bt_jugar"
-            android:layout_width="179dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Jugar" />
 
         <TextView
             android:id="@+id/txtProveedor"
@@ -88,5 +57,39 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.075" />
 
+        <Button
+            android:id="@+id/bt_iniGoo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:gravity="center"
+            android:text="Conectar con Google"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/bt_jugar"
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="300dp"
+            android:gravity="center"
+            android:text="Jugar" />
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="Los brunchies"
+            android:textColor="#E60505"
+            android:textSize="54sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/bt_jugar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

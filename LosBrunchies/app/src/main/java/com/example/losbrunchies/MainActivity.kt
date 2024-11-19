@@ -5,7 +5,6 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
@@ -52,6 +51,12 @@ class MainActivity : AppCompatActivity() {
         // Configurar el botón de inicio de sesión con Google
         binding.btIniGoo.setOnClickListener {
             loginWithGoogle()
+        }
+
+        // Configurar el boton de jugar
+        binding.btJugar.setOnClickListener {
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
         }
     }
 
