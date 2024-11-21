@@ -22,9 +22,6 @@
             android:name=".Alimentacion"
             android:exported="false" />
         <activity
-            android:name=".Home1"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
