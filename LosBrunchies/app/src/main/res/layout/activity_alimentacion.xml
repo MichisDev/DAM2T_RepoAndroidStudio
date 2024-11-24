@@ -20,23 +20,25 @@
         <TextView
             android:id="@+id/tv_rec"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:text="Recectas"
             android:textSize="20sp" />
 
-        <ImageView
-            android:id="@+id/imageView4"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recetas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            app:srcCompat="@drawable/ic_launcher_background" />
-
+            android:layout_height="104dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="match_parent"
-            android:layout_height="408dp"
+            android:layout_height="349dp"
             app:srcCompat="@drawable/per1" />
 
         <Button

@@ -1,4 +1,3 @@
 package modelo
 
-class Receta {
-}
+data class Receta(val imagen: Int, val nombre: String)
