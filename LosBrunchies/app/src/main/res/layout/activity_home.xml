@@ -27,19 +27,19 @@
             android:id="@+id/btAli"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ALIMENTACION" />
+            android:text="@string/btAli" />
 
         <Button
             android:id="@+id/btBt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BATALLA" />
+            android:text="@string/btBt" />
 
         <Button
             android:id="@+id/bt_cerrarSesion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cerrar sesion" />
+            android:text="@string/bt_cerrarSesion" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
