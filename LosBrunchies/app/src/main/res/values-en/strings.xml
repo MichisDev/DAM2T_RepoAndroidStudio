@@ -3,7 +3,7 @@
     <string name="app_name">LosBrunchies</string>
     <string name="tvTitulo">The Brunchies</string>
     <string name="bt_jugar">Play</string>
-    <string name="bt_iniGoo">Connect with Google</string>
+    <string name="bt_iniSesion">Init session</string>
     <string name="txtEmail">E-mail</string>
     <string name="txtNombre">Name</string>
     <string name="txtProveedor">Provider</string>

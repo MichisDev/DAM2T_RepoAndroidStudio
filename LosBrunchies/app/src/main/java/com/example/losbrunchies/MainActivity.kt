@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
         // Configurar el botón de inicio de sesión con Google
-        binding.btIniGoo.setOnClickListener {
+        binding.ivGoogle.setOnClickListener {
             loginWithGoogle()
         }
 

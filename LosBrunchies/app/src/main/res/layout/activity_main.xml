@@ -71,27 +71,42 @@
             tools:ignore="HardcodedText" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/ivInicio"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:srcCompat="@drawable/juntos" />
 
-        <Button
-            android:id="@+id/bt_iniGoo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:gravity="center"
-            android:text="@string/bt_iniGoo"
-            tools:ignore="HardcodedText" />
 
-        <Button
-            android:id="@+id/bt_jugar"
-            android:layout_width="180dp"
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:gravity="center"
-            android:text="@string/bt_jugar" />
+            android:hint="Introduce alias"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_Alias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_Pass"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/bt_registro"
@@ -101,6 +116,31 @@
             android:gravity="center"
             android:text="@string/bt_registro" />
 
+        <Button
+            android:id="@+id/bt_iniSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:gravity="center"
+            android:text="@string/bt_iniSesion"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/bt_jugar"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:text="@string/bt_jugar" />
+
+        <ImageView
+            android:id="@+id/ivGoogle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/google" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

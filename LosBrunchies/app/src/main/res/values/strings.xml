@@ -3,7 +3,7 @@
     <string name="your_web_client_id" translatable="false">714791296443-goup1qea668o2p5tk4ht6j9h4j3m2ns7.apps.googleusercontent.com</string>
     <string name="tvTitulo">Los Brunchies</string>
     <string name="bt_jugar">Jugar</string>
-    <string name="bt_iniGoo">Conectar con Google</string>
+    <string name="bt_iniSesion">Iniciar sesión</string>
     <string name="txtEmail">Email</string>
     <string name="txtNombre">Nombre</string>
     <string name="txtProveedor">Proveedor</string>
