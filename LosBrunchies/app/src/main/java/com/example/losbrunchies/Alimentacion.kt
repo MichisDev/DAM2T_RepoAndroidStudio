@@ -12,35 +12,26 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.losbrunchies.databinding.ActivityAlimentacionBinding
 import modelo.Receta
+import modelo.RecetaData
 
 class Alimentacion : AppCompatActivity() {
+
     private lateinit var binding: ActivityAlimentacionBinding
+    private lateinit var recetas: MutableList<Receta>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        enableEdgeToEdge()
         binding = ActivityAlimentacionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // inicia
+        recetas = RecetaData.obtenerRecetas().toMutableList()
 
-        val recetas = listOf(
-            Receta(R.drawable.receta1, "Receta 1"),
-            Receta(R.drawable.receta2, "Receta 2"),
-            Receta(R.drawable.receta3, "Receta 3"),
-            // ... más recetas
-        )
-
-        val recyclerView = findViewById<RecyclerView>(R.id.rv_recetas)
-        recyclerView.adapter = RecetaAdapter(recetas)
-        // Usar el LinearLayoutManager personalizado
-        recyclerView.layoutManager =
-            CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-
-        // Agregar el RecyclerView.ItemDecoration
-        recyclerView.addItemDecoration(EspacioEntreElementos(2)) // 8dp de espacio
-
-        // SnapHelper para que el RecyclerView se mueva a la receta seleccionada
-        val snapHelper = PagerSnapHelper()
-        snapHelper.attachToRecyclerView(recyclerView)
+        var recyclerView: RecyclerView = binding.rvRecetas
+        recyclerView.layoutManager = CustomLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val adapter = RecetaAdapter(recetas)
+        recyclerView.adapter = adapter
 
         // Configurar el botón de volver al home
         binding.btVol.setOnClickListener {

@@ -25,14 +25,11 @@
             android:textSize="20sp" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_recetas"
+            android:id="@+id/rvRecetas"
             android:layout_width="match_parent"
-            android:layout_height="104dp"
-            android:orientation="horizontal"
+            android:layout_height="139dp"
             android:layout_gravity="center_horizontal"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
 
         <ImageView
