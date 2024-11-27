@@ -23,11 +23,12 @@
             android:layout_height="520dp"
             app:srcCompat="@drawable/huevo" />
 
-        <Button
-            android:id="@+id/btAli"
+
+        <ImageView
+            android:id="@+id/iv_ali"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btAli" />
+            app:srcCompat="@drawable/bt_alimentacion" />
 
         <Button
             android:id="@+id/btBt"

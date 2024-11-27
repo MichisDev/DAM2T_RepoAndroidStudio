@@ -29,7 +29,7 @@ class Home : AppCompatActivity() {
         }
 
         // Configurar el botón de alimentación
-        binding.btAli.setOnClickListener {
+        binding.ivAli.setOnClickListener {
             val intent = Intent(this, Alimentacion::class.java)
             startActivity(intent)
         }
