@@ -77,12 +77,11 @@
             app:srcCompat="@drawable/juntos" />
 
 
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textField1"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
             android:hint="Introduce alias"
             app:endIconMode="clear_text">
 
@@ -94,17 +93,17 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textField2"
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:hint="Password"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ti_Pass"
-                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:layout_marginStart="30dp"
+                android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
