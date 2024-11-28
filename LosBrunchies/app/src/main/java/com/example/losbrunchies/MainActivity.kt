@@ -71,6 +71,11 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
+    private fun registrarsql() {
+        val nick = binding.tiAlias.text
+        val pass = binding.tiPass.text
+    }
+
     private fun comprobarSesion() {
         val email = sharedPreferences.getString("email", null)
         val provider = sharedPreferences.getString("provider", null)

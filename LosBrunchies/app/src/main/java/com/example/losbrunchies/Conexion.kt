@@ -12,8 +12,8 @@ object Conexion {
     fun cambiarBD(nombreBD:String){
         this.DATABASE_NAME = nombreBD
     }
-    fun addUsuario(contexto: AppCompatActivity, p: UsuarioSQLite):Long{
-        val admin = AdminSQLIteConexion(contexto, this.DATABASE_NAME, null, DATABASE_VERSION)
+    fun addUsuario(context: AppCompatActivity, p: UsuarioSQLite):Long{
+        val admin = AdminSQLIteConexion(context, this.DATABASE_NAME, null, DATABASE_VERSION)
         val bd = admin.writableDatabase
         val registro = ContentValues()
         registro.put("nick", p.nick)
@@ -23,16 +23,16 @@ object Conexion {
         return codigo
     }
 
-    fun delUsuario(contexto: AppCompatActivity, nick: String):Int{
-        val admin = AdminSQLIteConexion(contexto, this.DATABASE_NAME, null, DATABASE_VERSION)
+    fun delUsuario(context: AppCompatActivity, nick: String):Int{
+        val admin = AdminSQLIteConexion(context, this.DATABASE_NAME, null, DATABASE_VERSION)
         val bd = admin.writableDatabase
         val cant = bd.delete("Usuarios", "nick=?", arrayOf(nick.toString()))
         bd.close()
         return cant
     }
 
-    fun modUsuario(contexto:AppCompatActivity, nick:String, p:UsuarioSQLite):Int {
-        val admin = AdminSQLIteConexion(contexto, this.DATABASE_NAME, null, DATABASE_VERSION)
+    fun modUsuario(context:AppCompatActivity, nick:String, p:UsuarioSQLite):Int {
+        val admin = AdminSQLIteConexion(context, this.DATABASE_NAME, null, DATABASE_VERSION)
         val bd = admin.writableDatabase
         val registro = ContentValues()
         registro.put("nick", p.nick)
