@@ -142,5 +142,11 @@
             android:layout_marginTop="8dp"
             app:srcCompat="@drawable/google" />
 
+        <Button
+            android:id="@+id/bt_cerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_cerrarSesion" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

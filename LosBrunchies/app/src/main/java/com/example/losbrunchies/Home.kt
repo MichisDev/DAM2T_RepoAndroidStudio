@@ -23,9 +23,9 @@ class Home : AppCompatActivity() {
         // Configurar el comportamiento de cierre de sesión
         sharedPreferences = getSharedPreferences("session_prefs", MODE_PRIVATE)
 
-        // Configurar el botón de cierre de sesión
-        binding.btCerrarSesion.setOnClickListener {
-            logout()
+        // Configurar el boton para volver a la pantalla de inicio
+        binding.ivVolver.setOnClickListener {
+            finish()
         }
 
         // Configurar el botón de alimentación
@@ -35,16 +35,11 @@ class Home : AppCompatActivity() {
         }
 
         // Configurar el botón de batalla
-        binding.btBt.setOnClickListener {
+        binding.ivBat.setOnClickListener {
             //val intent = Intent(this, Batalla::class.java)
             Toast.makeText(this, "Próximamente se implementara esta pantalla", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun logout() {
-        sharedPreferences.edit().clear().apply()
-        val loginIntent = Intent(this, MainActivity::class.java)
-        startActivity(loginIntent)
-        finish()
-    }
+
 }

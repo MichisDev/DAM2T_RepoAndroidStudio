@@ -52,12 +52,23 @@ class MainActivity : AppCompatActivity() {
         binding.ivGoogle.setOnClickListener {
             loginWithGoogle()
         }
+        //
+        binding.btCerrarSesion.setOnClickListener {
+            logout()
+        }
 
         // Configurar el boton de jugar
         binding.btJugar.setOnClickListener {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun logout() {
+        sharedPreferences.edit().clear().apply()
+        val loginIntent = Intent(this, MainActivity::class.java)
+        startActivity(loginIntent)
+        finish()
     }
 
     private fun comprobarSesion() {
