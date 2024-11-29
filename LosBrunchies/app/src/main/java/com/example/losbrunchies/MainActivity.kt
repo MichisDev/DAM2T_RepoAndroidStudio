@@ -17,6 +17,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import kotlin.text.clear
 
 class MainActivity : AppCompatActivity() {
 
@@ -62,6 +63,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
+        binding.btRegistro.setOnClickListener {
+            registrarsql()
+        }
     }
 
     private fun logout() {
@@ -74,6 +78,14 @@ class MainActivity : AppCompatActivity() {
     private fun registrarsql() {
         val nick = binding.tiAlias.text
         val pass = binding.tiPass.text
+        val user = UsuarioSQLite(nick.toString(), pass.toString())
+        val result = Conexion.addUsuario(this, user)
+        if (result != -1L) {
+            binding.tiAlias.clearComposingText()
+            binding.tiPass.clearComposingText()
+        } else {
+            Toast.makeText(this, "Error al crear usuario", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun comprobarSesion() {
@@ -93,7 +105,7 @@ class MainActivity : AppCompatActivity() {
 
     private val lanzadorGoogleSignIn =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == Activity.RESULT_OK) {
+            if (result.resultCode == RESULT_OK) {
                 val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
                 manejarGoogleSignInResult(task)
             }
