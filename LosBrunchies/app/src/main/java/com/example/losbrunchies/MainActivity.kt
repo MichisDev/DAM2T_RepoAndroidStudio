@@ -54,16 +54,16 @@ class MainActivity : AppCompatActivity() {
             loginWithGoogle()
         }
         //
-        binding.btCerrarSesion.setOnClickListener {
+        binding.ivCerrarSesion.setOnClickListener {
             logout()
         }
 
         // Configurar el boton de jugar
-        binding.btJugar.setOnClickListener {
+        binding.ivJugar.setOnClickListener {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
-        binding.btRegistro.setOnClickListener {
+        binding.ivRegistrar.setOnClickListener {
             registrarsql()
         }
     }
@@ -92,10 +92,10 @@ class MainActivity : AppCompatActivity() {
         val email = sharedPreferences.getString("email", null)
         val provider = sharedPreferences.getString("provider", null)
         val name = sharedPreferences.getString("name", null)
-
-        if (email != null && provider != null) {
-           actulizarUI(provider, name ?: "Usuario", email)
-        }
+//      PRUEBA CONEXION PROVEEDOR NOMBRE Y EMAIL GOOGLE
+//        if (email != null && provider != null) {
+//           actulizarUI(provider, name ?: "Usuario", email)
+//        }
     }
 
     private fun loginWithGoogle() {
@@ -123,7 +123,8 @@ class MainActivity : AppCompatActivity() {
                         val name = it.displayName ?: "Usuario"
 
                         guardarSesion(email, provider, name)
-                        actulizarUI(provider, name, email)
+                        // PRUEBA CONEXION PROVEEDOR NOMBRE Y EMAIL GOOGLE
+//                        actulizarUI(provider, name, email)
                         mostrarWelcomeDialog(name)
                     } else {
                         Toast.makeText(this, authTask.exception?.message, Toast.LENGTH_SHORT).show()
@@ -144,11 +145,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun actulizarUI(provider: String, name: String, email: String) {
-        binding.txtProveedor.text = provider
-        binding.txtNombre.text = name
-        binding.txtEmail.text = email
-    }
+
 
     private fun mostrarWelcomeDialog(name: String) {
         AlertDialog.Builder(this)
@@ -157,4 +154,48 @@ class MainActivity : AppCompatActivity() {
             .setPositiveButton("Aceptar") { dialog, _ -> dialog.dismiss() }
             .show()
     }
+
+    /*
+    PRUEBA CONEXION PROVEEDOR NOMBRE Y EMAIL GOOGLE
+    private fun actulizarUI(provider: String, name: String, email: String) {
+        binding.txtProveedor.text = provider
+        binding.txtNombre.text = name
+        binding.txtEmail.text = email
+    }
+     <TextView
+            android:id="@+id/txtProveedor"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Proveedor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.122" />
+
+        <TextView
+            android:id="@+id/txtNombre"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.175" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.075" />
+     */
 }
