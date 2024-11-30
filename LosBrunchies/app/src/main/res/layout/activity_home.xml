@@ -9,8 +9,8 @@
 
     <LinearLayout
         android:id="@+id/llselecion"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,6 +21,7 @@
             android:id="@+id/ivHome"
             android:layout_width="match_parent"
             android:layout_height="520dp"
+            android:layout_marginTop="0dp"
             app:srcCompat="@drawable/huevo" />
 
 
@@ -28,21 +29,21 @@
             android:id="@+id/iv_ali"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.6"
             app:srcCompat="@drawable/bt_alimentacion" />
 
         <ImageView
             android:id="@+id/iv_bat"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.6"
             app:srcCompat="@drawable/bt_batalla" />
 
         <ImageView
             android:id="@+id/iv_volver"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.6"
             app:srcCompat="@drawable/bt_volver" />
     </LinearLayout>
 
