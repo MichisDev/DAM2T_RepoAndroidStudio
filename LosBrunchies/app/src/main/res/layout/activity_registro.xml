@@ -6,11 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
-
+    tools:context=".Registro">
 
     <LinearLayout
-        android:id="@+id/llInicio"
+        android:id="@+id/llhuevos"
         android:layout_width="344dp"
         android:layout_height="458dp"
         android:background="@drawable/shape_drawable"
@@ -24,7 +23,7 @@
         app:layout_constraintVertical_bias="0.975">
 
         <EditText
-            android:id="@+id/etAlias"
+            android:id="@+id/etAliasRegis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/text_button"
@@ -33,12 +32,22 @@
             android:paddingLeft="40dp" />
 
         <EditText
-            android:id="@+id/etPass"
+            android:id="@+id/etPassRegis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/text_button"
             android:hint="Password"
+            android:inputType="text|textPassword"
+            android:paddingLeft="40dp" />
+
+        <EditText
+            android:id="@+id/etRepiPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/text_button"
+            android:hint="Repite Password"
             android:inputType="text|textPassword"
             android:paddingLeft="40dp" />
 
@@ -51,54 +60,36 @@
             android:textAlignment="center">
 
             <ImageButton
-                android:id="@+id/ivPlay"
+                android:id="@+id/ivPlayRegis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#00000000"
                 android:paddingTop="10dp"
-                app:srcCompat="@drawable/btn_play"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:textAlignment="center">
-
-            <ImageButton
-                android:id="@+id/ivGoogle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#00000000"
-                android:paddingTop="10dp"
-                app:srcCompat="@drawable/btn_google"
-                tools:ignore="SpeakableTextPresentCheck" />
+                app:srcCompat="@drawable/btn_play" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tvRegis"
+            android:id="@+id/tvJuega"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
             android:gravity="center_horizontal"
-            android:text="¿No tienes cuenta? Regístrate"
+            android:text="¿Ya tienes cuenta? Juega ya..."
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/ivTiulo"
+        android:id="@+id/ivTit"
         android:layout_width="259dp"
         android:layout_height="250dp"
         android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/llInicio"
+        app:layout_constraintBottom_toTopOf="@+id/llhuevos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/backgroung" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

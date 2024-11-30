@@ -53,36 +53,38 @@ class MainActivity : AppCompatActivity() {
         binding.ivGoogle.setOnClickListener {
             loginWithGoogle()
         }
-        //
-        binding.ivCerrarSesion.setOnClickListener {
-            logout()
-        }
 
         // Configurar el boton de jugar
-        binding.ivJugar.setOnClickListener {
+        binding.ivPlay.setOnClickListener {
             val intent = Intent(this, Home::class.java)
             startActivity(intent)
         }
-        binding.ivRegistrar.setOnClickListener {
-            registrarsql()
+
+
+        binding.tvRegis.setOnClickListener {
+            val intent = Intent(this, Registro::class.java)
+            startActivity(intent)
+
         }
+
     }
+
 
     private fun logout() {
         sharedPreferences.edit().clear().apply()
-        val loginIntent = Intent(this, MainActivity::class.java)
+        val loginIntent = Intent(this, Registro::class.java)
         startActivity(loginIntent)
         finish()
     }
 
     private fun registrarsql() {
-        val nick = binding.tiAlias.text
-        val pass = binding.tiPass.text
+        val nick = binding.etAlias.text
+        val pass = binding.etPass.text
         val user = UsuarioSQLite(nick.toString(), pass.toString())
         val result = Conexion.addUsuario(this, user)
         if (result != -1L) {
-            binding.tiAlias.clearComposingText()
-            binding.tiPass.clearComposingText()
+            binding.etAlias.clearComposingText()
+            binding.etPass.clearComposingText()
         } else {
             Toast.makeText(this, "Error al crear usuario", Toast.LENGTH_SHORT).show()
         }

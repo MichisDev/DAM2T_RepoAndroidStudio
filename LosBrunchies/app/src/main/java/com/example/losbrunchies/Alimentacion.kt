@@ -1,6 +1,7 @@
 package com.example.losbrunchies
 
 import adaptador.RecetaAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.AutoCompleteTextView
@@ -62,6 +63,18 @@ class Alimentacion : AppCompatActivity() {
             finish()
         }
 
+        // Configurar el botón de alimentación
+//        binding.ivAli.setOnClickListener {
+//            val intent = Intent(this, Alimentacion::class.java)
+//            startActivity(intent)
+//        }
+//
+//        // Configurar el botón de batalla
+//        binding.ivBat.setOnClickListener {
+//            //val intent = Intent(this, Batalla::class.java)
+//            Toast.makeText(this, "Próximamente se implementara esta pantalla", Toast.LENGTH_SHORT).show()
+//        }
+
     }
 
     private fun mostrarCrearRecetaDialog() {
@@ -70,7 +83,6 @@ class Alimentacion : AppCompatActivity() {
 
         val builder = MaterialAlertDialogBuilder(this)
             .setTitle("Crea tu propia receta")
-            .setMessage("Mensaje de receta")
             .setView(dialogBinding.root)
             .setNegativeButton("Cancelar") { dialog, which ->
                 Toast.makeText(this, "Creación de receta cancelada", Toast.LENGTH_SHORT).show()

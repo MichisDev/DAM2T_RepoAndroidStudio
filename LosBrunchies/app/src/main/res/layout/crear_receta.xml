@@ -113,27 +113,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/llFila3Ch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <CheckBox
-            android:id="@+id/chIgrediente5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Ingrediente 5" />
-
-        <CheckBox
-            android:id="@+id/chIgrediente6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Ingrediente 6" />
-
-    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
