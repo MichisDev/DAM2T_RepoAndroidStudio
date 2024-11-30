@@ -48,16 +48,7 @@
         <item name="colorSurfaceContainer">@color/md_theme_surfaceContainer</item>
         <item name="colorSurfaceContainerHigh">@color/md_theme_surfaceContainerHigh</item>
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest</item>
-
-        <!-- Agrega esta línea para aplicar el estilo al TextInputLayout COMBO-->
-        <item name="textInputStyle">@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu</item>
     </style>
 
     <style name="Theme.LosBrunchies" parent="Base.Theme.LosBrunchies" />
-
-
-    <!--Estilo combo material -->
-    <style name="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu" parent="Widget.Material3.TextInputLayout.OutlinedBox">
-        <item name="boxBackgroundColor">?attr/colorSurface</item>
-    </style>
 </resources>

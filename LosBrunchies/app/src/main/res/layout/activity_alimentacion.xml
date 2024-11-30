@@ -21,12 +21,8 @@
             android:id="@+id/tv_rec"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="@color/md_theme_inversePrimary"
-            android:fontFamily="cursive"
-            android:gravity="center_horizontal"
             android:text="Recectas"
-            android:textSize="34sp"
-            android:textStyle="bold|italic" />
+            android:textSize="20sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvRecetas"
@@ -35,46 +31,38 @@
             android:layout_gravity="center_horizontal"
             tools:ignore="SpeakableTextPresentCheck" />
 
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="349dp"
+            app:srcCompat="@drawable/per1" />
+
+        <Button
+            android:id="@+id/btVol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volver" />
+
         <LinearLayout
             android:id="@+id/llBotones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/ivCrear"
+            <Button
+                android:id="@+id/bt_crear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/bt_crear" />
+                android:text="Crear Receta" />
 
-            <ImageView
-                android:id="@+id/ivPlantar"
+            <Button
+                android:id="@+id/bt_plantar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/bt_plantar" />
-
+                android:text="Plantar" />
         </LinearLayout>
-        <ImageView
-            android:id="@+id/ivPerAlimentado"
-            android:layout_width="match_parent"
-            android:layout_height="349dp"
-            app:srcCompat="@drawable/per1" />
-
-
-        <ProgressBar
-            android:id="@+id/pbEnergia"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="333dp"
-            android:layout_height="37dp"
-            android:layout_gravity="center" />
-
-        <ImageView
-            android:id="@+id/ivVolverAli"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/bt_volver" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

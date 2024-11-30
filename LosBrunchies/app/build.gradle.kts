@@ -4,7 +4,6 @@ plugins {
     // Add the Google services Gradle plugin
     id("com.google.gms.google-services")
 
-
 }
 
 android {
@@ -71,7 +70,4 @@ dependencies {
     // https://firebase.google.com/docs/android/setup#available-libraries
 
     implementation("com.google.android.gms:play-services-auth:20.6.0")
-
-    // Material
-    implementation("com.google.android.material:material:1.9.0")
 }
