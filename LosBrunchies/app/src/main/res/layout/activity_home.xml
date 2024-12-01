@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:gravity="center_horizontal"
-            android:text="SELECCIONA TU PERSONAJE:"
+            android:text="@string/tv"
             android:textSize="16sp"
             android:textStyle="bold" />
 

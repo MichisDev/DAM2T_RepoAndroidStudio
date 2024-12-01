@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/text_button"
-            android:hint="Password"
+            android:hint="@string/etPassRegis"
             android:inputType="text|textPassword"
             android:paddingLeft="40dp" />
 
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/text_button"
-            android:hint="Repite Password"
+            android:hint="@string/etRepiPass"
             android:inputType="text|textPassword"
             android:paddingLeft="40dp" />
 
@@ -66,7 +66,8 @@
                 android:layout_weight="1"
                 android:background="#00000000"
                 android:paddingTop="10dp"
-                app:srcCompat="@drawable/btn_play" />
+                app:srcCompat="@drawable/btn_play"
+                tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 
         <TextView
@@ -75,10 +76,11 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:gravity="center_horizontal"
-            android:text="¿Ya tienes cuenta? Juega ya..."
+            android:text="@string/tvJuega"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
 

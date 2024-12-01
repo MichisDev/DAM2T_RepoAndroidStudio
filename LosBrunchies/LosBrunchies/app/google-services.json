@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "714791296443",
+    "project_id": "brunchies-cd647",
+    "storage_bucket": "brunchies-cd647.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714791296443:android:a6e3e5f135cb628b07f89e",
+        "android_client_info": {
+          "package_name": "com.example.losbrunchies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714791296443-h53072hu5ic69ukg8qbc28p3h8nigvi0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.losbrunchies",
+            "certificate_hash": "c5eac385df555afe4cf846b8d4c69734232c4c7f"
+          }
+        },
+        {
+          "client_id": "714791296443-r39l4d0jfk9kjeenu3q45e3bgkc1v15m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.losbrunchies",
+            "certificate_hash": "71bc16833a5ed52905aabadcd081a61b7b4bc014"
+          }
+        },
+        {
+          "client_id": "714791296443-goup1qea668o2p5tk4ht6j9h4j3m2ns7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrixwDZ7XWo-wWqmmdOQPh8Jay_mcbACM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714791296443-goup1qea668o2p5tk4ht6j9h4j3m2ns7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

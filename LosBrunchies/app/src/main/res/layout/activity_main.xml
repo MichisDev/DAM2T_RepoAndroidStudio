@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/text_button"
-            android:hint="Alias"
+            android:hint="@string/etAlias"
             android:inputType="text"
             android:paddingLeft="40dp" />
 
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/text_button"
-            android:hint="Password"
+            android:hint="@string/etPass"
             android:inputType="text|textPassword"
             android:paddingLeft="40dp" />
 
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:gravity="center_horizontal"
-            android:text="¿No tienes cuenta? Regístrate"
+            android:text="@string/tvRegis"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"

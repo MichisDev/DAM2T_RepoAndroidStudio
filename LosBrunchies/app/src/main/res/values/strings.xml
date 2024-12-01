@@ -1,18 +1,12 @@
 <resources>
     <string name="app_name">LosBrunchies</string>
-    <string name="your_web_client_id" translatable="false">714791296443-goup1qea668o2p5tk4ht6j9h4j3m2ns7.apps.googleusercontent.com</string>
-    <string name="tvTitulo">Los Brunchies</string>
-    <string name="bt_jugar">Jugar</string>
-    <string name="bt_iniSesion">Iniciar sesión</string>
-    <string name="txtEmail">Email</string>
-    <string name="txtNombre">Nombre</string>
-    <string name="txtProveedor">Proveedor</string>
-    <string name="bt_cerrarSesion">Cerrar sesión</string>
-    <string name="btBt">BATALLA</string>
-    <string name="btAli">ALIMENTACIÓN</string>
-    <string name="btVol">Volver</string>
-    <string name="bt_plantar">Plantar</string>
-    <string name="bt_crear">Crear Receta</string>
-    <string name="tv_rec">Recetas</string>
-    <string name="bt_registro">Registrate</string>
+    <string name="your_web_client_id">714791296443-goup1qea668o2p5tk4ht6j9h4j3m2ns7.apps.googleusercontent.com</string>
+    <string name="etAliasRegis">Alias</string>
+    <string name="etPassRegis">Contraseña</string>
+    <string name="etRepiPass">Repite Contraseña</string>
+    <string name="tvJuega">¿Ya tienes cuenta? Juega ya...</string>
+    <string name="etAlias">Alias</string>
+    <string name="etPass">Contraseña</string>
+    <string name="tvRegis">¿No tienes cuenta? Regístrate</string>
+    <string name="tv">SELECCIONA TU PERSONAJE:</string>
 </resources>
