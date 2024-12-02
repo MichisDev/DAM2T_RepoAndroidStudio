@@ -1,6 +1,5 @@
 package modelo
 
-import com.example.losbrunchies.R
 
 object RecetaData {
     val recetas = mutableListOf(

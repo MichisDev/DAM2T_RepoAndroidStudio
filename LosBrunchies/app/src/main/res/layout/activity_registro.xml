@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/text_button"
-            android:hint="@string/etPassRegis"
+            android:hint="Password"
             android:inputType="text|textPassword"
             android:paddingLeft="40dp" />
 
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/text_button"
-            android:hint="@string/etRepiPass"
+            android:hint="Repite Password"
             android:inputType="text|textPassword"
             android:paddingLeft="40dp" />
 
@@ -66,8 +66,7 @@
                 android:layout_weight="1"
                 android:background="#00000000"
                 android:paddingTop="10dp"
-                app:srcCompat="@drawable/btn_play"
-                tools:ignore="SpeakableTextPresentCheck" />
+                app:srcCompat="@drawable/btn_play" />
         </LinearLayout>
 
         <TextView
@@ -76,11 +75,10 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:gravity="center_horizontal"
-            android:text="@string/tvJuega"
+            android:text="¿Ya tienes cuenta? Juega ya..."
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -92,6 +90,6 @@
         app:layout_constraintBottom_toTopOf="@+id/llhuevos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/title" />
+        app:srcCompat="@drawable/backgroung" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

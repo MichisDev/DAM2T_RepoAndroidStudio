@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/per1"
+        android:icon="@drawable/huevo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/per1"
+        android:roundIcon="@drawable/huevo"
         android:supportsRtl="true"
         android:theme="@style/Theme.LosBrunchies"
         tools:targetApi="31">

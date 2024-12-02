@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:gravity="center_horizontal"
-            android:text="@string/tv"
+            android:text="SELECCIONA TU PERSONAJE:"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
         app:layout_constraintBottom_toTopOf="@+id/llhuevos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/title" />
+        app:srcCompat="@drawable/backgroung" />
 
     <LinearLayout
         android:layout_width="410dp"
@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/bt_atras" />
+            app:srcCompat="@drawable/button_forward" />
 
         <ImageView
             android:id="@+id/ivSeguir"

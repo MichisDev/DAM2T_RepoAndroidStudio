@@ -18,7 +18,7 @@
         android:layout_width="81dp"
         android:layout_height="61dp"
         android:scaleType="centerCrop"
-        tools:srcCompat="@drawable/receta1" />
+        tools:srcCompat="@drawable/food_panel" />
 
     <TextView
         android:id="@+id/tv_nombre_receta"
@@ -32,5 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="?android:attr/listDivider" />
+
 
 </LinearLayout>
